@@ -1,0 +1,78 @@
+platform :ios, "9.0"
+use_frameworks!
+inhibit_all_warnings!
+
+workspace 'Bilibili.xcworkspace'
+
+def pods
+   
+   #Frameworks
+   pod 'RxSwift', '~>3.5.0'
+   pod 'R.swift', '~>3.3.0'
+   pod 'SnapKit', '~>3.2.0'
+   pod 'Kingfisher', '~> 3.10.0'
+   pod 'SwiftyUserDefaults', '~>3.0.0'
+   pod 'GPUImage2', :podspec => './Bilibili/Podspec/GPUImage2.podspec'
+   pod 'SQLite.swift', :git => 'https://github.com/949886/SQLite.swift.git'
+   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+   pod 'CryptoSwift', :git => 'https://github.com/krzyzanowskim/CryptoSwift.git', :branch => 'develop'
+   
+   pod 'Hero', '~> 0.3.6'
+   pod 'IBAnimatable', '~>4.1.0'
+   
+   pod 'Sakura'
+   
+   #Frameworks - OC
+   pod 'lottie-ios', '~>1.0'
+   pod 'MJRefresh', '~>3.1.0'
+   pod 'WebViewJavascriptBridge', '~> 6.0.0'
+   
+   #Debug
+   pod 'Reveal-SDK', '~> 4', :configurations => ['Debug']
+   
+   #Local
+   pod 'BilibiliAPI', :path => './BilibiliAPI'
+
+end
+
+def react_native
+
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'DevSupport',
+    'BatchedBridge',
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket'
+  ]
+
+  pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+
+end
+
+target :Bilibili do
+    project 'Bilibili/Bilibili.xcodeproj'
+    pods
+    react_native
+
+    target 'BilibiliTests' do
+        inherit! :search_paths
+    end
+    
+    target 'BilibiliUITests' do
+        inherit! :search_paths
+    end
+end
+
+
+swift4pods = ['BilibiliAPI']
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if  !(swift4pods.include? target.name)
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
+        end
+    end
+end

@@ -1,0 +1,11 @@
+#!/bin/bash
+CMD_PATH=`dirname $0`
+cd $CMD_PATH
+cd ..
+sudo npm install
+cd ios
+pod install
+open Bilibili.xcworkspace
+cd ..
+sudo npm start
+exit 0
