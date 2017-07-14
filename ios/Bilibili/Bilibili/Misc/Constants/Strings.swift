@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct Strings {
+    static let REACT_NATIVE_URL = "http://localhost:8081/index.ios.bundle?platform=ios"
+}

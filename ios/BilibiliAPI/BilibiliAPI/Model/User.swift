@@ -8,20 +8,7 @@
 
 import Foundation
 
-class User
+open class User
 {
     
-}
-
-
-struct GroceryProduct: Codable {
-    var name: String
-    var points: Int
-    var description: String
-    
-    private enum CodingKeys: String, CodingKey {
-        case name = "product_name"
-        case points = "product_cost"
-        case description
-    }
 }

@@ -12,6 +12,11 @@ import SnapKit
 
 class HomeViewController: UIViewController
 {
+    static var route: String = "tsetest"
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     //MARK: Override
     
@@ -35,7 +40,7 @@ class HomeViewController: UIViewController
     
     @objc func onButtonClick(button: UIButton) {
         NSLog("Hello")
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.ios.bundle?platform=ios")
+        let jsCodeLocation = URL(string: Strings.REACT_NATIVE_URL)
         let mockData:NSDictionary = ["scores": [
                 ["name":"Alex", "value":"42"],
                 ["name":"Joel", "value":"10"]

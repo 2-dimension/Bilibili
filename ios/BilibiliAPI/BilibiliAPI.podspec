@@ -9,8 +9,10 @@ Pod::Spec.new do |s|
   s.source = { :git => './' }
   s.platform = :ios, '8.0'
   s.requires_arc = true
-  s.xcconfig    = { 'SWIFT_VERSION' => '4.0' }
-  s.source_files = 'BilibiliAPI/**/*.swift'
+  #s.preserve_path = 'Modules/*'
+  s.xcconfig    = { 'SWIFT_VERSION' => '4.0'}
+  s.pod_target_xcconfig  =  { 'SWIFT_INCLUDE_PATHS' => "\"#{File.join(File.dirname(__FILE__), 'Modules')}\"" }
+  s.source_files = 'BilibiliAPI/**/*.{h,swift}'
   s.exclude_files = 'SakuraTests/**/*.swift'
   s.vendored_libraries = '**/*.a'
   s.frameworks = 'Foundation'

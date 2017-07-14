@@ -11,6 +11,7 @@ def pods
    pod 'R.swift', '~>3.3.0'
    pod 'SnapKit', '~>3.2.0'
    pod 'Kingfisher', '~> 3.10.0'
+   pod 'URLNavigator', '~> 1.2.0'
    pod 'SwiftyUserDefaults', '~>3.0.0'
    pod 'GPUImage2', :podspec => './Bilibili/Podspec/GPUImage2.podspec'
    pod 'SQLite.swift', :git => 'https://github.com/949886/SQLite.swift.git'
@@ -18,7 +19,6 @@ def pods
    pod 'CryptoSwift', :git => 'https://github.com/krzyzanowskim/CryptoSwift.git', :branch => 'develop'
    
    pod 'Hero', '~> 0.3.6'
-   pod 'IBAnimatable', '~>4.1.0'
    
    pod 'Sakura'
    

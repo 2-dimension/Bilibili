@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		987C69DB1E72532700B28199 /* BilibiliAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987C69D11E72532700B28199 /* BilibiliAPI.framework */; };
-		987C69E01E72532700B28199 /* BilibiliAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C69DF1E72532700B28199 /* BilibiliAPITests.swift */; };
 		987C69E21E72532700B28199 /* BilibiliAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 987C69D41E72532700B28199 /* BilibiliAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		987C69F11E72859D00B28199 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C69F01E72859D00B28199 /* BaseAPI.swift */; };
-		DF3110D11F0699EC0069EC00 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3110D01F0699EC0069EC00 /* Decoder.swift */; };
 		DF78588C1EF1117C00FF232F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78588B1EF1117C00FF232F /* User.swift */; };
+		DF8A13E41F15280300AAD201 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A13E31F15280300AAD201 /* Extensions.swift */; };
+		DF8A13E51F1528B100AAD201 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CD6EC1F1527AA00704C2D /* Decoder.swift */; };
+		DF9CD6EA1F1522B200704C2D /* BilibiliVideoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */; };
+		DFBC910F1F15483F005262AF /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC910E1F15483F005262AF /* Season.swift */; };
+		DFBC91111F154860005262AF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC91101F154860005262AF /* Episode.swift */; };
+		DFBC91661F168D32005262AF /* BilibiliException.h in Headers */ = {isa = PBXBuildFile; fileRef = DF0FBDA41F0653F3007F7615 /* BilibiliException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFBC91861F191736005262AF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBC91851F191731005262AF /* Alamofire.framework */; };
+		DFBCA12F1F154228007E4A08 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCA12E1F154228007E4A08 /* Video.swift */; };
 		DFF402641F065D9700E48F92 /* BilibiliAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA31F0653F3007F7615 /* BilibiliAuth.swift */; };
-		DFF402651F065D9700E48F92 /* BilibiliException.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA41F0653F3007F7615 /* BilibiliException.swift */; };
 		DFF402661F065D9700E48F92 /* BilibiliRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA51F0653F3007F7615 /* BilibiliRequest.swift */; };
 		DFF402671F065D9700E48F92 /* BilibiliResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA61F0653F3007F7615 /* BilibiliResponse.swift */; };
 		DFF402681F065D9700E48F92 /* BilibiliURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA71F0653F3007F7615 /* BilibiliURL.swift */; };
@@ -23,36 +26,26 @@
 		DFF4026B1F065DA500E48F92 /* BilibiliAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBD9A1F0653F3007F7615 /* BilibiliAPI.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		987C69DC1E72532700B28199 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 987C69C81E72532700B28199 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 987C69D01E72532700B28199;
-			remoteInfo = BilibiliAPI;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		987C69D11E72532700B28199 /* BilibiliAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BilibiliAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C69D41E72532700B28199 /* BilibiliAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilibiliAPI.h; sourceTree = "<group>"; };
 		987C69D51E72532700B28199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987C69DA1E72532700B28199 /* BilibiliAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilibiliAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		987C69DF1E72532700B28199 /* BilibiliAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPITests.swift; sourceTree = "<group>"; };
-		987C69E11E72532700B28199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987C69EB1E72535A00B28199 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		987C69F01E72859D00B28199 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		DF0FBD9A1F0653F3007F7615 /* BilibiliAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPI.swift; sourceTree = "<group>"; };
 		DF0FBD9E1F0653F3007F7615 /* BilibiliAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAppAPI.swift; sourceTree = "<group>"; };
 		DF0FBDA11F0653F3007F7615 /* BilibiliUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliUserAPI.swift; sourceTree = "<group>"; };
 		DF0FBDA31F0653F3007F7615 /* BilibiliAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAuth.swift; sourceTree = "<group>"; };
-		DF0FBDA41F0653F3007F7615 /* BilibiliException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliException.swift; sourceTree = "<group>"; };
+		DF0FBDA41F0653F3007F7615 /* BilibiliException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilibiliException.h; sourceTree = "<group>"; };
 		DF0FBDA51F0653F3007F7615 /* BilibiliRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliRequest.swift; sourceTree = "<group>"; };
 		DF0FBDA61F0653F3007F7615 /* BilibiliResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliResponse.swift; sourceTree = "<group>"; };
 		DF0FBDA71F0653F3007F7615 /* BilibiliURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliURL.swift; sourceTree = "<group>"; };
-		DF3110D01F0699EC0069EC00 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		DF78588B1EF1117C00FF232F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DFF4025E1F065BBC00E48F92 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		DF8A13E31F15280300AAD201 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliVideoAPI.swift; sourceTree = "<group>"; };
+		DF9CD6EC1F1527AA00704C2D /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		DFBC910E1F15483F005262AF /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		DFBC91101F154860005262AF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		DFBC91851F191731005262AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		DFBCA12E1F154228007E4A08 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		987C69D71E72532700B28199 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				987C69DB1E72532700B28199 /* BilibiliAPI.framework in Frameworks */,
+				DFBC91861F191736005262AF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				987C69D31E72532700B28199 /* BilibiliAPI */,
-				987C69DE1E72532700B28199 /* BilibiliAPITests */,
 				DF0FBDF91F0656B3007F7615 /* Frameworks */,
 				987C69D21E72532700B28199 /* Products */,
 			);
@@ -88,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				987C69D11E72532700B28199 /* BilibiliAPI.framework */,
-				987C69DA1E72532700B28199 /* BilibiliAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,44 +84,26 @@
 				DF7858861EF1108400FF232F /* Model */,
 				987C69D41E72532700B28199 /* BilibiliAPI.h */,
 				987C69D51E72532700B28199 /* Info.plist */,
-				987C69EB1E72535A00B28199 /* module.modulemap */,
-				987C69F01E72859D00B28199 /* BaseAPI.swift */,
 			);
 			path = BilibiliAPI;
-			sourceTree = "<group>";
-		};
-		987C69DE1E72532700B28199 /* BilibiliAPITests */ = {
-			isa = PBXGroup;
-			children = (
-				987C69DF1E72532700B28199 /* BilibiliAPITests.swift */,
-				987C69E11E72532700B28199 /* Info.plist */,
-			);
-			path = BilibiliAPITests;
 			sourceTree = "<group>";
 		};
 		DF0FBD991F0653F3007F7615 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				DF0FBD9A1F0653F3007F7615 /* BilibiliAPI.swift */,
-				DF0FBD9B1F0653F3007F7615 /* Decode */,
 				DF0FBD9C1F0653F3007F7615 /* Interface */,
 				DF0FBDA21F0653F3007F7615 /* Network */,
+				DF9CD6EB1F1527AA00704C2D /* Support */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		DF0FBD9B1F0653F3007F7615 /* Decode */ = {
-			isa = PBXGroup;
-			children = (
-				DF3110D01F0699EC0069EC00 /* Decoder.swift */,
-			);
-			path = Decode;
 			sourceTree = "<group>";
 		};
 		DF0FBD9C1F0653F3007F7615 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
 				DF0FBD9D1F0653F3007F7615 /* App */,
+				DF9CD6E81F15229F00704C2D /* Video */,
 				DF0FBD9F1F0653F3007F7615 /* Others */,
 				DF0FBDA01F0653F3007F7615 /* User */,
 			);
@@ -170,8 +136,8 @@
 		DF0FBDA21F0653F3007F7615 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DF0FBDA41F0653F3007F7615 /* BilibiliException.h */,
 				DF0FBDA31F0653F3007F7615 /* BilibiliAuth.swift */,
-				DF0FBDA41F0653F3007F7615 /* BilibiliException.swift */,
 				DF0FBDA51F0653F3007F7615 /* BilibiliRequest.swift */,
 				DF0FBDA61F0653F3007F7615 /* BilibiliResponse.swift */,
 				DF0FBDA71F0653F3007F7615 /* BilibiliURL.swift */,
@@ -182,7 +148,7 @@
 		DF0FBDF91F0656B3007F7615 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFF4025E1F065BBC00E48F92 /* Alamofire.framework */,
+				DFBC91851F191731005262AF /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			path = BilibiliAPI/Frameworks;
@@ -192,8 +158,28 @@
 			isa = PBXGroup;
 			children = (
 				DF78588B1EF1117C00FF232F /* User.swift */,
+				DFBC91101F154860005262AF /* Episode.swift */,
+				DFBC910E1F15483F005262AF /* Season.swift */,
+				DFBCA12E1F154228007E4A08 /* Video.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DF9CD6E81F15229F00704C2D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		DF9CD6EB1F1527AA00704C2D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DF9CD6EC1F1527AA00704C2D /* Decoder.swift */,
+				DF8A13E31F15280300AAD201 /* Extensions.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987C69E21E72532700B28199 /* BilibiliAPI.h in Headers */,
+				DFBC91661F168D32005262AF /* BilibiliException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,24 +215,6 @@
 			productReference = 987C69D11E72532700B28199 /* BilibiliAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		987C69D91E72532700B28199 /* BilibiliAPITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 987C69E81E72532700B28199 /* Build configuration list for PBXNativeTarget "BilibiliAPITests" */;
-			buildPhases = (
-				987C69D61E72532700B28199 /* Sources */,
-				987C69D71E72532700B28199 /* Frameworks */,
-				987C69D81E72532700B28199 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				987C69DD1E72532700B28199 /* PBXTargetDependency */,
-			);
-			name = BilibiliAPITests;
-			productName = BilibiliAPITests;
-			productReference = 987C69DA1E72532700B28199 /* BilibiliAPITests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,11 +228,6 @@
 					987C69D01E72532700B28199 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = V667438P6G;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
-					};
-					987C69D91E72532700B28199 = {
-						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -282,20 +246,12 @@
 			projectRoot = "";
 			targets = (
 				987C69D01E72532700B28199 /* BilibiliAPI */,
-				987C69D91E72532700B28199 /* BilibiliAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		987C69CF1E72532700B28199 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		987C69D81E72532700B28199 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -309,37 +265,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987C69F11E72859D00B28199 /* BaseAPI.swift in Sources */,
+				DFBC91111F154860005262AF /* Episode.swift in Sources */,
 				DFF402661F065D9700E48F92 /* BilibiliRequest.swift in Sources */,
+				DF9CD6EA1F1522B200704C2D /* BilibiliVideoAPI.swift in Sources */,
 				DFF402691F065D9D00E48F92 /* BilibiliAppAPI.swift in Sources */,
-				DFF402651F065D9700E48F92 /* BilibiliException.swift in Sources */,
 				DFF4026B1F065DA500E48F92 /* BilibiliAPI.swift in Sources */,
 				DFF4026A1F065D9D00E48F92 /* BilibiliUserAPI.swift in Sources */,
+				DFBC910F1F15483F005262AF /* Season.swift in Sources */,
+				DF8A13E41F15280300AAD201 /* Extensions.swift in Sources */,
 				DF78588C1EF1117C00FF232F /* User.swift in Sources */,
-				DF3110D11F0699EC0069EC00 /* Decoder.swift in Sources */,
 				DFF402671F065D9700E48F92 /* BilibiliResponse.swift in Sources */,
 				DFF402681F065D9700E48F92 /* BilibiliURL.swift in Sources */,
 				DFF402641F065D9700E48F92 /* BilibiliAuth.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		987C69D61E72532700B28199 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				987C69E01E72532700B28199 /* BilibiliAPITests.swift in Sources */,
+				DF8A13E51F1528B100AAD201 /* Decoder.swift in Sources */,
+				DFBCA12F1F154228007E4A08 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		987C69DD1E72532700B28199 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 987C69D01E72532700B28199 /* BilibiliAPI */;
-			targetProxy = 987C69DC1E72532700B28199 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		987C69E31E72532700B28199 /* Debug */ = {
@@ -456,6 +399,7 @@
 		987C69E61E72532700B28199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -475,6 +419,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.YaeSakura.BilibiliAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -484,6 +430,7 @@
 		987C69E71E72532700B28199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -502,32 +449,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.YaeSakura.BilibiliAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		987C69E91E72532700B28199 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = BilibiliAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YaeSakura.BilibiliAPITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		987C69EA1E72532700B28199 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = BilibiliAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.YaeSakura.BilibiliAPITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Modules";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -550,15 +473,6 @@
 			buildConfigurations = (
 				987C69E61E72532700B28199 /* Debug */,
 				987C69E71E72532700B28199 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		987C69E81E72532700B28199 /* Build configuration list for PBXNativeTarget "BilibiliAPITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				987C69E91E72532700B28199 /* Debug */,
-				987C69EA1E72532700B28199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,6 +10,8 @@
 		0CF6813A46FD5F82AAEFB34A /* Pods_BilibiliUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61C89C3EED9E9E8E68DDF4A /* Pods_BilibiliUITests.framework */; };
 		7081C6E511BF1ED74FCF1DFD /* Pods_Bilibili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CCD7587ED9F33B805C308C /* Pods_Bilibili.framework */; };
 		85AA3223E38682FF5F221C4D /* Pods_BilibiliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E071E5AAB526F57261B626B /* Pods_BilibiliTests.framework */; };
+		98CA573D1F138BF800E4B370 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573A1F138BF300E4B370 /* LoadingViewController.swift */; };
+		98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */; };
 		DF167FE21F0220BB004079A4 /* LocalVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF167FE11F0220BB004079A4 /* LocalVideoInfo.swift */; };
 		DF4D79881F0AB1BA0037A3D8 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79861F0AB1B50037A3D8 /* RootNavigationController.swift */; };
 		DF4D79891F0AB1BA0037A3D8 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79871F0AB1B50037A3D8 /* RootTabBarController.swift */; };
@@ -21,8 +23,6 @@
 		DF50308F1EFD67100083A75F /* EmoticonKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50308B1EFD66620083A75F /* EmoticonKeyboard.swift */; };
 		DF5030901EFD67100083A75F /* EmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50308C1EFD66630083A75F /* EmoticonManager.swift */; };
 		DF5030911EFD67100083A75F /* EmoticonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50308A1EFD66620083A75F /* EmoticonParser.swift */; };
-		DF50309D1EFD691D0083A75F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50309C1EFD691D0083A75F /* LoadingViewController.swift */; };
-		DF50309F1EFD69390083A75F /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50309E1EFD69390083A75F /* PortraitNavigationController.swift */; };
 		DF5B31551EA760A40029E181 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5B31531EA760A40029E181 /* iPhone.storyboard */; };
 		DF8226601E696A3E00C88679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF82265F1E696A3E00C88679 /* Assets.xcassets */; };
 		DF8226631E696A3E00C88679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8226611E696A3E00C88679 /* LaunchScreen.storyboard */; };
@@ -35,6 +35,7 @@
 		DF8226A01E697DE300C88679 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A21E697DE300C88679 /* Localizable.strings */; };
 		DF8226A51E697E0500C88679 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A71E697E0500C88679 /* Localizable.stringsdict */; };
 		DFB751CC1F012462007EA1F2 /* BilibiliSystemMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB751CB1F012462007EA1F2 /* BilibiliSystemMessage.swift */; };
+		DFBC918A1F19188B005262AF /* BilibiliAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC91891F19188B005262AF /* BilibiliAPITests.swift */; };
 		DFD6FB261F0519DE00C39B45 /* BaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6FB251F0519DE00C39B45 /* BaseStorage.swift */; };
 		DFD6FB271F05201600C39B45 /* LocalVideoInfoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6FB231F0519D000C39B45 /* LocalVideoInfoStorage.swift */; };
 		DFD6FB281F05202700C39B45 /* SystemMessageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6FB241F0519D000C39B45 /* SystemMessageStorage.swift */; };
@@ -68,6 +69,8 @@
 		2C9B554E8E9EA56439F71B44 /* Pods-BilibiliUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliUITests/Pods-BilibiliUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47F79A037D40E834E5A41379 /* Pods-Bilibili.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bilibili.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Bilibili/Pods-Bilibili.debug.xcconfig"; sourceTree = "<group>"; };
 		79A81944F7B38A2051511A2B /* Pods-BilibiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliTests/Pods-BilibiliTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98CA573A1F138BF300E4B370 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		9F3D8C91AFE58189A27A094E /* Pods-BilibiliUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliUITests/Pods-BilibiliUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A88E28E78B94EE9CE34D6DE5 /* Pods-Bilibili.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bilibili.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Bilibili/Pods-Bilibili.release.xcconfig"; sourceTree = "<group>"; };
 		C58884E704897A6C804015C3 /* Pods-BilibiliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliTests/Pods-BilibiliTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,8 +86,6 @@
 		DF50308B1EFD66620083A75F /* EmoticonKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonKeyboard.swift; sourceTree = "<group>"; };
 		DF50308C1EFD66630083A75F /* EmoticonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonManager.swift; sourceTree = "<group>"; };
 		DF50308D1EFD66630083A75F /* Emoticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoticon.swift; sourceTree = "<group>"; };
-		DF50309C1EFD691D0083A75F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		DF50309E1EFD69390083A75F /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		DF5B31541EA760A40029E181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bilibili/Base.lproj/iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		DF8226531E696A3E00C88679 /* Bilibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bilibili.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF82265F1E696A3E00C88679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		DF8226A11E697DE300C88679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF8226A61E697E0500C88679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		DFB751CB1F012462007EA1F2 /* BilibiliSystemMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BilibiliSystemMessage.swift; sourceTree = "<group>"; };
+		DFBC91891F19188B005262AF /* BilibiliAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPITests.swift; sourceTree = "<group>"; };
 		DFD6FB211F0519D000C39B45 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DFD6FB231F0519D000C39B45 /* LocalVideoInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoInfoStorage.swift; sourceTree = "<group>"; };
 		DFD6FB241F0519D000C39B45 /* SystemMessageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMessageStorage.swift; sourceTree = "<group>"; };
@@ -155,6 +157,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		98CA57381F138BF300E4B370 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				98CA57391F138BF300E4B370 /* Controller */,
+				98CA573C1F138BF300E4B370 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		98CA57391F138BF300E4B370 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				98CA573A1F138BF300E4B370 /* LoadingViewController.swift */,
+				98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		98CA573C1F138BF300E4B370 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B33549C113BECFE9D6060AC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,22 +219,6 @@
 				DF50308A1EFD66620083A75F /* EmoticonParser.swift */,
 			);
 			path = Emoticon;
-			sourceTree = "<group>";
-		};
-		DF5030921EFD67920083A75F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				DF50309C1EFD691D0083A75F /* LoadingViewController.swift */,
-				DF50309E1EFD69390083A75F /* PortraitNavigationController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DF5030931EFD67920083A75F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DF77E5A91EFD28CD00DD3209 /* Constants */ = {
@@ -276,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				DF82266D1E696A3E00C88679 /* BilibiliTests.swift */,
+				DFBC91891F19188B005262AF /* BilibiliAPITests.swift */,
 				DF82266F1E696A3E00C88679 /* Info.plist */,
 			);
 			path = BilibiliTests;
@@ -301,8 +313,7 @@
 		DF82268A1E696D4A00C88679 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				DF5030921EFD67920083A75F /* Controller */,
-				DF5030931EFD67920083A75F /* View */,
+				98CA57381F138BF300E4B370 /* UI */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -334,7 +345,6 @@
 		DF82268E1E696D4A00C88679 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				DFB751C71F0123A4007EA1F2 /* Misc */,
 				DF82268F1E696D4A00C88679 /* Account */,
 				DF5030871EFD65FF0083A75F /* Emoticon */,
 				DF5030821EFD65DA0083A75F /* Theme */,
@@ -362,14 +372,6 @@
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		DFB751C71F0123A4007EA1F2 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Misc;
-			path = Bilibili/Model/Misc;
-			sourceTree = SOURCE_ROOT;
 		};
 		DFB751C81F012403007EA1F2 /* Misc */ = {
 			isa = PBXGroup;
@@ -777,6 +779,7 @@
 				DF4D79881F0AB1BA0037A3D8 /* RootNavigationController.swift in Sources */,
 				DF167FE21F0220BB004079A4 /* LocalVideoInfo.swift in Sources */,
 				DFDFF5BC1EFDA19100CB5340 /* ProfileViewController.swift in Sources */,
+				98CA573D1F138BF800E4B370 /* LoadingViewController.swift in Sources */,
 				DF5030811EFD655D0083A75F /* Notifications.swift in Sources */,
 				DF8226981E696D4A00C88679 /* AccountManager.swift in Sources */,
 				DFDFF5C41EFDA1BF00CB5340 /* AttentionViewController.swift in Sources */,
@@ -787,12 +790,11 @@
 				DF5030841EFD65E50083A75F /* Theme.swift in Sources */,
 				DF8226971E696D4A00C88679 /* Account.swift in Sources */,
 				DF8226941E696D4A00C88679 /* AppDelegate.swift in Sources */,
-				DF50309D1EFD691D0083A75F /* LoadingViewController.swift in Sources */,
+				98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */,
 				DF5030911EFD67100083A75F /* EmoticonParser.swift in Sources */,
 				DFD6FB281F05202700C39B45 /* SystemMessageStorage.swift in Sources */,
 				DF5030901EFD67100083A75F /* EmoticonManager.swift in Sources */,
 				DF82269F1E697DB400C88679 /* R.generated.swift in Sources */,
-				DF50309F1EFD69390083A75F /* PortraitNavigationController.swift in Sources */,
 				DFD6FB261F0519DE00C39B45 /* BaseStorage.swift in Sources */,
 				DFDFF5C01EFDA1A900CB5340 /* DiscoverViewController.swift in Sources */,
 				DF5030861EFD65F00083A75F /* ThemeManager.swift in Sources */,
@@ -803,6 +805,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBC918A1F19188B005262AF /* BilibiliAPITests.swift in Sources */,
 				DF82266E1E696A3E00C88679 /* BilibiliTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

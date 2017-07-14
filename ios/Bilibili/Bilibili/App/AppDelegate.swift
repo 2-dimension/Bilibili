@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreSpotlight
+import UserNotifications
+import URLNavigator
 import BilibiliAPI
 
 @UIApplicationMain
@@ -14,11 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    // Mark: Life Cycle
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        print(Bundle.main.bundlePath)
-        test()
+        BilibiliAPI.getVideoInfo(aid: 12104863, success: { (response) in
+            if  let result = response.result,
+                let data = try? JSONEncoder().encode(result) {
+                let desc = String(data: data, encoding: .utf8)
+                print(desc ?? "NIL")
+            }
+        }, failure: { (response) in
+            print("Request failed. \(response)")
+        })
+        
+        setup()
         
         return true
     }
@@ -42,7 +55,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         
     }
-
-
+    
+    
+    //MARK: Misc
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        // URLNavigator Handler
+        if Navigator.open(url) {
+            return true
+        }
+        
+        return true
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        
+        // Spotlight
+        if userActivity.activityType == CSSearchableItemActionType {
+            
+        }
+        
+        // Universal links
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb  {
+            let _ = userActivity.webpageURL
+            
+        }
+        
+        return true
+    }
+    
+    
+    //MARK: Notification
+    
+    // Before iOS 10
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        
+    }
+    
+    // Before iOS 10
+    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable : Any], completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        if notification.request.trigger is UNPushNotificationTrigger {
+            // Background
+            print(userInfo)
+        } else {
+            // Foreground
+        }
+        
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        if response.notification.request.trigger is UNPushNotificationTrigger {
+            // Background
+            print(userInfo)
+        } else {
+            // Foreground
+        }
+    }
+    
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+    }
+    
+    //MARK: Encapsulation
+    
+    private func setup() {
+        //FIXME: Method not implemented.
+    }
+    
 }
-

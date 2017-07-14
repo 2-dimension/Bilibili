@@ -9,74 +9,95 @@
 import Foundation
 import Alamofire
 
-class BilibiliRequest
+open class BilibiliRequest
 {
     
-    /// Generic request method for standard buka request.
+    /// Generic request method for bilibili request.
     ///
     /// - Parameters:
-    ///   - url: Request URL. Default is buka main server URL.
-    ///   - gzip: If response is not gizpped, set this value to false. Default is ture.
-    ///   - interface: Interface name (for non-RESTful interface). e.g. func_getdetail.
-    ///   - version: API version, for version adaptation. Default is 16.
+    ///   - url: Request URL.
+    ///   - method: HTTP method.
     ///   - parameters: Request parameters.
+    ///   - sign: Weather need signature according key & secret.
+    ///   - keyPath: Path of json which real data exists.
     ///   - success: Success callback closure.
     ///   - failure: Failure callback closure.
-//    static func request<T: NSObject, U>(
-//        url: String,
-//        parameters:Parameters?,
-//        success: BilibiliAPI.Callback<T>,
-//        failure: BilibiliAPI.Callback<U>) {
-//
-//        let params = ParametersBuilder(parameters)
-//            .interface(interface)
-//            .version(version)
-//            .gzip(gzip)
-//            .build()
-//
-//        Alamofire.request(url, method: .post, parameters: params).response {
-//            response in
-//            if response.error == nil {
-//                // Success
-//                if  let data = response.data,
-//                    let unzipedData = gzip ? (data as NSData).gzipInflate() : data,
-//                    let dict = [AnyHashable:Any](jsonData: unzipedData) {
-//
-//                    let code = BukaException(dict["ret"] as? Int ?? 0)
-//                    let model = T.model(with: dict)
-//
-//                    if code == .OK { success?(BukaResponse(code, model)) }
-//                    else { failure?(BukaResponse(code)) }
-//                }
-//            } else {
-//                // Fail
-//                failure?(BukaResponse(.FAILED))
-//            }
-//        }
-//    }
+    public static func request<T: Decodable>(
+        url: String,
+        method: HTTPMethod = .get,
+        parameters:Parameters?,
+        sign: Bool = false,
+        keyPath: String? = nil,
+        success: BilibiliAPI.Callback<T>,
+        failure: BilibiliAPI.Callback<T>) {
+        
+        let params = ParametersBuilder(parameters)
+            .sign(sign)
+            .build()
+        
+        Alamofire.request(url, method: method, parameters: params).response {
+            response in
+            if response.error == nil {
+                // Success
+                if  let data = response.data,
+                    let json = String.init(data: data, encoding: .utf8),
+                    let dict = [String:Any](json: json) {
+                    
+                    let code = dict["code"] as? Int ?? -1
+                    let message = dict["message"] as? String
+                    let result = try? T.object(from: dict.value(forKeyPath: keyPath) as? [String:Any] ?? dict)
+                    
+                    let biliResponse = BilibiliResponse(code, message, result)
+                    if biliResponse.code == .OK { success?(biliResponse) }
+                    else { failure?(biliResponse) }
+                }
+            } else { failure?(BilibiliResponse(.FAIL)) }
+        }
+    }
+    
+    public static func request<T: Decodable>(
+        url: String,
+        method: HTTPMethod = .get,
+        parameters:Parameters?,
+        keyPath: String? = nil,
+        success: BilibiliAPI.Callback<Array<T>>,
+        failure: BilibiliAPI.Callback<Array<T>>) {
+        
+        let params = ParametersBuilder(parameters)
+            .sign(true)
+            .build()
+        
+        Alamofire.request(url, method: method, parameters: params).response {
+            response in
+            if response.error == nil {
+                // Success
+                if  let data = response.data,
+                    let json = String.init(data: data, encoding: .utf8),
+                    let dict = [AnyHashable:Any](json: json) {
+                    
+                    let code = dict["code"] as? Int ?? -1
+                    let message = dict["message"] as? String
+                    let result = try? T.array(from: json)
+                    
+                    let biliResponse = BilibiliResponse(code, message, result)
+                    if biliResponse.code == .OK { success?(biliResponse) }
+                    else { failure?(biliResponse) }
+                }
+            } else { failure?(BilibiliResponse(.FAIL)) }
+        }
+    }
     
     /// Basic parameters builder for standard buka request.
-    class ParametersBuilder {
+    internal class ParametersBuilder {
         private var rawParameters: Parameters!
-        private var version: Int? = nil
-        private var gzip: Bool = true
+        private var sign: Bool = false
         
         init(_ rawParameters: Parameters?) {
             self.rawParameters = rawParameters ?? Parameters()
         }
         
-        func interface(_ funcName: String) -> Self {
-            rawParameters?["f"] = funcName
-            return self
-        }
-        
-        func version(_ version: Int) -> Self {
-            self.version = version
-            return self
-        }
-        
-        func gzip(_ bool: Bool) -> Self {
-            self.gzip = bool
+        func sign(_ bool: Bool) -> Self {
+            self.sign = bool
             return self
         }
         
@@ -85,15 +106,22 @@ class BilibiliRequest
                 return Parameters()
             }
             
-            let data = try! JSONSerialization.data(withJSONObject: rawParameters, options: .prettyPrinted)
-            let jsonParams = String(data: data, encoding: .utf8) ?? ""
+            var parameters = rawParameters!
+            parameters["build"] = UIApplication.shared.buildVersion
+            parameters["device"] = "phone"
+            parameters["mobi_app"] = "iphone"
+            parameters["platform"] = "ios"
+            parameters["ts"] = Int(Date().timeIntervalSince1970)
+            parameters["appkey"] = sign ? APP_KEY : nil
+            parameters["actionKey"] = sign ? "appkey" : nil
+            parameters["sign"] = sign ? BilibiliAuth.generateSign(parameters) : nil
             
-            var params = [:] as Parameters
-            
-            return params
+            return parameters
         }
     }
     
-    
-    
+}
+
+extension BilibiliRequest {
+    static let DEFAULT_DATA_KEY_PATH = "data"
 }

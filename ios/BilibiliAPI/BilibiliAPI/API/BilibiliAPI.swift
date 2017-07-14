@@ -8,7 +8,9 @@
 
 import Foundation
 
-class BilibiliAPI
-{
-    
+open class BilibiliAPI { }
+
+public extension BilibiliAPI {
+    typealias Parameters = [String:Any]
+    typealias Callback<T> = ((_ response: BilibiliResponse<T>) -> Void)?
 }

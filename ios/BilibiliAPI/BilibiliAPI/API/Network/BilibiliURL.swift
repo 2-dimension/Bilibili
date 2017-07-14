@@ -16,4 +16,6 @@ struct BilibiliURL
     static let BASE_BANGUMI = "https://bangumi.bilibili.com"
     static let BASE_LIVE = "https://live.bilibili.com"
     static let BASE_PASSPORT = "https://passport.bilibili.com"
+    
+    static let VIDEO_INFO = BASE_APP + "/x/v2/view"
 }
