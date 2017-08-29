@@ -11,6 +11,13 @@ import CommonCrypto
 
 extension String
 {
+    var bool: Bool? {
+        if let number = Int(self) {
+            return Bool(exactly: NSNumber(value: number))
+        }
+        return nil
+    }
+    
     func md5() -> String {
         let messageData = self.data(using:.utf8)!
         var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
@@ -22,6 +29,14 @@ extension String
         }
         
         return digestData.map { String(format: "%02hhx", $0) }.joined()
+    }
+}
+
+extension Array
+{
+    var json: String {
+        let data = (try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)) ?? Data()
+        return String(data: data, encoding: .utf8)!
     }
 }
 

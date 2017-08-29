@@ -129,6 +129,37 @@ class SystemMessageStorage
         }
     }
     
+    /// Handle messages synchronously.
+    func handleMessages(_ messages: [BilibiliSystemMessage]) -> Bool {
+        let r1 = updateMessages(messages)
+        let r2 = addMessages(messages)
+        return r1 && r2
+    }
+    
+    /// Handle messages asynchronously.
+    func handleMessages(_ messages: [BilibiliSystemMessage], callback: @escaping (Bool) -> Void) {
+        DispatchQueue(label: "SystemMessageStorage.HandleMessages").async {
+            [unowned self] in
+            let flag = self.handleMessages(messages)
+            callback(flag)
+        }
+    }
+    
+    /// Get count of all unread messages synchronously.
+    func getUnreadMessagesCount() -> Int {
+        if database == nil { return 0 }
+        return (try? database!.scalar(table.table.where(table.columns.isReaded == false).count)) ?? 0
+    }
+    
+    /// Get count of all unread messages asynchronously.
+    func getUnreadMessagesCount(callback: @escaping (Int) -> Void) {
+        DispatchQueue(label: "SystemMessageStorage.GetUnreadMessages").async {
+            [unowned self] in
+            let count = self.getUnreadMessagesCount()
+            callback(count)
+        }
+    }
+    
     //MARK: Nested Classes
     
     class MessagesTable

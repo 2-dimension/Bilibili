@@ -8,10 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		987C69E21E72532700B28199 /* BilibiliAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 987C69D41E72532700B28199 /* BilibiliAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF78588C1EF1117C00FF232F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78588B1EF1117C00FF232F /* User.swift */; };
+		DF0906691F4FF00D00D77C5B /* BangumiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0906681F4FF00D00D77C5B /* BangumiAPI.swift */; };
+		DF09066B1F4FF05E00D77C5B /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF09066A1F4FF05E00D77C5B /* AccountAPI.swift */; };
+		DF2EB6841F233CFE00E99259 /* PlayURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB6831F233CFE00E99259 /* PlayURL.swift */; };
+		DF2EB6861F23415800E99259 /* RecoFeedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB6851F23415800E99259 /* RecoFeedList.swift */; };
+		DF2EB6881F2341FC00E99259 /* LiveFeedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB6871F2341FC00E99259 /* LiveFeedList.swift */; };
+		DF2EB68A1F23421400E99259 /* BangumiFeedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB6891F23421400E99259 /* BangumiFeedList.swift */; };
+		DF2EB68C1F23422100E99259 /* Bangumi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB68B1F23422100E99259 /* Bangumi.swift */; };
+		DF2EB68E1F23428000E99259 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB68D1F23428000E99259 /* Comment.swift */; };
+		DF2EB6901F23429900E99259 /* BannerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EB68F1F23429900E99259 /* BannerInfo.swift */; };
+		DF78588C1EF1117C00FF232F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78588B1EF1117C00FF232F /* UserInfo.swift */; };
 		DF8A13E41F15280300AAD201 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A13E31F15280300AAD201 /* Extensions.swift */; };
 		DF8A13E51F1528B100AAD201 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CD6EC1F1527AA00704C2D /* Decoder.swift */; };
-		DF9CD6EA1F1522B200704C2D /* BilibiliVideoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */; };
+		DF9ABBF11F532FA7002F997B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9ABBF01F532FA7002F997B /* Tag.swift */; };
+		DF9CD6EA1F1522B200704C2D /* VideoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CD6E91F1522B200704C2D /* VideoAPI.swift */; };
+		DF9E72481F2B01EE0006C6E9 /* LiveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9E72471F2B01EE0006C6E9 /* LiveAPI.swift */; };
 		DFBC910F1F15483F005262AF /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC910E1F15483F005262AF /* Season.swift */; };
 		DFBC91111F154860005262AF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC91101F154860005262AF /* Episode.swift */; };
 		DFBC91661F168D32005262AF /* BilibiliException.h in Headers */ = {isa = PBXBuildFile; fileRef = DF0FBDA41F0653F3007F7615 /* BilibiliException.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,8 +32,8 @@
 		DFF402661F065D9700E48F92 /* BilibiliRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA51F0653F3007F7615 /* BilibiliRequest.swift */; };
 		DFF402671F065D9700E48F92 /* BilibiliResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA61F0653F3007F7615 /* BilibiliResponse.swift */; };
 		DFF402681F065D9700E48F92 /* BilibiliURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA71F0653F3007F7615 /* BilibiliURL.swift */; };
-		DFF402691F065D9D00E48F92 /* BilibiliAppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBD9E1F0653F3007F7615 /* BilibiliAppAPI.swift */; };
-		DFF4026A1F065D9D00E48F92 /* BilibiliUserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA11F0653F3007F7615 /* BilibiliUserAPI.swift */; };
+		DFF402691F065D9D00E48F92 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBD9E1F0653F3007F7615 /* AppAPI.swift */; };
+		DFF4026A1F065D9D00E48F92 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBDA11F0653F3007F7615 /* UserAPI.swift */; };
 		DFF4026B1F065DA500E48F92 /* BilibiliAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0FBD9A1F0653F3007F7615 /* BilibiliAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,18 +41,29 @@
 		987C69D11E72532700B28199 /* BilibiliAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BilibiliAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C69D41E72532700B28199 /* BilibiliAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilibiliAPI.h; sourceTree = "<group>"; };
 		987C69D51E72532700B28199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF0906681F4FF00D00D77C5B /* BangumiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiAPI.swift; sourceTree = "<group>"; };
+		DF09066A1F4FF05E00D77C5B /* AccountAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
 		DF0FBD9A1F0653F3007F7615 /* BilibiliAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPI.swift; sourceTree = "<group>"; };
-		DF0FBD9E1F0653F3007F7615 /* BilibiliAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAppAPI.swift; sourceTree = "<group>"; };
-		DF0FBDA11F0653F3007F7615 /* BilibiliUserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliUserAPI.swift; sourceTree = "<group>"; };
+		DF0FBD9E1F0653F3007F7615 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
+		DF0FBDA11F0653F3007F7615 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		DF0FBDA31F0653F3007F7615 /* BilibiliAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAuth.swift; sourceTree = "<group>"; };
 		DF0FBDA41F0653F3007F7615 /* BilibiliException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilibiliException.h; sourceTree = "<group>"; };
 		DF0FBDA51F0653F3007F7615 /* BilibiliRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliRequest.swift; sourceTree = "<group>"; };
 		DF0FBDA61F0653F3007F7615 /* BilibiliResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliResponse.swift; sourceTree = "<group>"; };
 		DF0FBDA71F0653F3007F7615 /* BilibiliURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliURL.swift; sourceTree = "<group>"; };
-		DF78588B1EF1117C00FF232F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DF2EB6831F233CFE00E99259 /* PlayURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayURL.swift; sourceTree = "<group>"; };
+		DF2EB6851F23415800E99259 /* RecoFeedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoFeedList.swift; sourceTree = "<group>"; };
+		DF2EB6871F2341FC00E99259 /* LiveFeedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFeedList.swift; sourceTree = "<group>"; };
+		DF2EB6891F23421400E99259 /* BangumiFeedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiFeedList.swift; sourceTree = "<group>"; };
+		DF2EB68B1F23422100E99259 /* Bangumi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangumi.swift; sourceTree = "<group>"; };
+		DF2EB68D1F23428000E99259 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		DF2EB68F1F23429900E99259 /* BannerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerInfo.swift; sourceTree = "<group>"; };
+		DF78588B1EF1117C00FF232F /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		DF8A13E31F15280300AAD201 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliVideoAPI.swift; sourceTree = "<group>"; };
+		DF9ABBF01F532FA7002F997B /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		DF9CD6E91F1522B200704C2D /* VideoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPI.swift; sourceTree = "<group>"; };
 		DF9CD6EC1F1527AA00704C2D /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		DF9E72471F2B01EE0006C6E9 /* LiveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAPI.swift; sourceTree = "<group>"; };
 		DFBC910E1F15483F005262AF /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		DFBC91101F154860005262AF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		DFBC91851F191731005262AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
@@ -88,6 +110,14 @@
 			path = BilibiliAPI;
 			sourceTree = "<group>";
 		};
+		DF0906671F4FED7100D77C5B /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DF0906681F4FF00D00D77C5B /* BangumiAPI.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		DF0FBD991F0653F3007F7615 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				DF0FBD9D1F0653F3007F7615 /* App */,
+				DF9E72461F2B01E00006C6E9 /* Live */,
 				DF9CD6E81F15229F00704C2D /* Video */,
-				DF0FBD9F1F0653F3007F7615 /* Others */,
+				DF0906671F4FED7100D77C5B /* Misc */,
 				DF0FBDA01F0653F3007F7615 /* User */,
 			);
 			path = Interface;
@@ -113,22 +144,16 @@
 		DF0FBD9D1F0653F3007F7615 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DF0FBD9E1F0653F3007F7615 /* BilibiliAppAPI.swift */,
+				DF0FBD9E1F0653F3007F7615 /* AppAPI.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		DF0FBD9F1F0653F3007F7615 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Others;
 			sourceTree = "<group>";
 		};
 		DF0FBDA01F0653F3007F7615 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				DF0FBDA11F0653F3007F7615 /* BilibiliUserAPI.swift */,
+				DF0FBDA11F0653F3007F7615 /* UserAPI.swift */,
+				DF09066A1F4FF05E00D77C5B /* AccountAPI.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -157,10 +182,18 @@
 		DF7858861EF1108400FF232F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF78588B1EF1117C00FF232F /* User.swift */,
+				DF78588B1EF1117C00FF232F /* UserInfo.swift */,
 				DFBC91101F154860005262AF /* Episode.swift */,
 				DFBC910E1F15483F005262AF /* Season.swift */,
 				DFBCA12E1F154228007E4A08 /* Video.swift */,
+				DF2EB6831F233CFE00E99259 /* PlayURL.swift */,
+				DF2EB68B1F23422100E99259 /* Bangumi.swift */,
+				DF2EB68D1F23428000E99259 /* Comment.swift */,
+				DF2EB68F1F23429900E99259 /* BannerInfo.swift */,
+				DF2EB6851F23415800E99259 /* RecoFeedList.swift */,
+				DF2EB6871F2341FC00E99259 /* LiveFeedList.swift */,
+				DF2EB6891F23421400E99259 /* BangumiFeedList.swift */,
+				DF9ABBF01F532FA7002F997B /* Tag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,7 +201,7 @@
 		DF9CD6E81F15229F00704C2D /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				DF9CD6E91F1522B200704C2D /* BilibiliVideoAPI.swift */,
+				DF9CD6E91F1522B200704C2D /* VideoAPI.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -180,6 +213,14 @@
 				DF8A13E31F15280300AAD201 /* Extensions.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		DF9E72461F2B01E00006C6E9 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				DF9E72471F2B01EE0006C6E9 /* LiveAPI.swift */,
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,17 +306,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2EB68C1F23422100E99259 /* Bangumi.swift in Sources */,
+				DF2EB6841F233CFE00E99259 /* PlayURL.swift in Sources */,
 				DFBC91111F154860005262AF /* Episode.swift in Sources */,
+				DF0906691F4FF00D00D77C5B /* BangumiAPI.swift in Sources */,
 				DFF402661F065D9700E48F92 /* BilibiliRequest.swift in Sources */,
-				DF9CD6EA1F1522B200704C2D /* BilibiliVideoAPI.swift in Sources */,
-				DFF402691F065D9D00E48F92 /* BilibiliAppAPI.swift in Sources */,
+				DF2EB6901F23429900E99259 /* BannerInfo.swift in Sources */,
+				DF2EB6861F23415800E99259 /* RecoFeedList.swift in Sources */,
+				DF9ABBF11F532FA7002F997B /* Tag.swift in Sources */,
+				DF9CD6EA1F1522B200704C2D /* VideoAPI.swift in Sources */,
+				DFF402691F065D9D00E48F92 /* AppAPI.swift in Sources */,
+				DF2EB6881F2341FC00E99259 /* LiveFeedList.swift in Sources */,
 				DFF4026B1F065DA500E48F92 /* BilibiliAPI.swift in Sources */,
-				DFF4026A1F065D9D00E48F92 /* BilibiliUserAPI.swift in Sources */,
+				DFF4026A1F065D9D00E48F92 /* UserAPI.swift in Sources */,
+				DF2EB68A1F23421400E99259 /* BangumiFeedList.swift in Sources */,
 				DFBC910F1F15483F005262AF /* Season.swift in Sources */,
 				DF8A13E41F15280300AAD201 /* Extensions.swift in Sources */,
-				DF78588C1EF1117C00FF232F /* User.swift in Sources */,
+				DF78588C1EF1117C00FF232F /* UserInfo.swift in Sources */,
 				DFF402671F065D9700E48F92 /* BilibiliResponse.swift in Sources */,
+				DF2EB68E1F23428000E99259 /* Comment.swift in Sources */,
+				DF09066B1F4FF05E00D77C5B /* AccountAPI.swift in Sources */,
 				DFF402681F065D9700E48F92 /* BilibiliURL.swift in Sources */,
+				DF9E72481F2B01EE0006C6E9 /* LiveAPI.swift in Sources */,
 				DFF402641F065D9700E48F92 /* BilibiliAuth.swift in Sources */,
 				DF8A13E51F1528B100AAD201 /* Decoder.swift in Sources */,
 				DFBCA12F1F154228007E4A08 /* Video.swift in Sources */,

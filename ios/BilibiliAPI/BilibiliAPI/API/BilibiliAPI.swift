@@ -13,4 +13,9 @@ open class BilibiliAPI { }
 public extension BilibiliAPI {
     typealias Parameters = [String:Any]
     typealias Callback<T> = ((_ response: BilibiliResponse<T>) -> Void)?
+    
+    public func register(key: String, secret: String) {
+        BilibiliAuth.APP_KEY = key
+        BilibiliAuth.APP_SECRET = secret
+    }
 }

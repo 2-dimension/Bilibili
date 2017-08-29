@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Alamofire-Swift.h</key>
 		<data>
-		prg9/xx7ILv6TkBWOMVveQWexDc=
+		Yg+QdRWdRH+Bps40U946OG11vQ0=
 		</data>
 		<key>Headers/Alamofire.h</key>
 		<data>
@@ -14,23 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Z+qZCuW4KGlJAatu3WH2fcjyy1w=
-		</data>
-		<key>Modules/Alamofire.swiftmodule/i386.swiftdoc</key>
-		<data>
-		RV6+PsqdeSqMduthHaQiWz85kd8=
-		</data>
-		<key>Modules/Alamofire.swiftmodule/i386.swiftmodule</key>
-		<data>
-		KfiY/N/BLt1W0osmEnaU/IsK53w=
+		olAX//p2IGX9Lh4gWNugJdh27Ag=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		DILXX2sUyqb5dZXpapHbAgFcQZ4=
+		yzUq/mn9WFwitd+SZmt0jJbqyfc=
 		</data>
 		<key>Modules/Alamofire.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		E4TA6EeXODw24KDsYHSraskh8d4=
+		217wkQjNJg7dQ+5ZkMp0JMWEaA0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			prg9/xx7ILv6TkBWOMVveQWexDc=
+			Yg+QdRWdRH+Bps40U946OG11vQ0=
 			</data>
 			<key>hash2</key>
 			<data>
-			vMgC3fOgZkHZ90A3DxpCLI3+vCIum3eUV6/8X1vKYMk=
+			1xz3adc779fhGsrF7vtP2w9ewrslQ65H1oT8ubMOTiU=
 			</data>
 		</dict>
 		<key>Headers/Alamofire.h</key>
@@ -61,48 +53,26 @@
 			sVJkysHFIbUiAzfAq/iru6/B7jmxx8gOxi2Too0HdRk=
 			</data>
 		</dict>
-		<key>Modules/Alamofire.swiftmodule/i386.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RV6+PsqdeSqMduthHaQiWz85kd8=
-			</data>
-			<key>hash2</key>
-			<data>
-			MCmdgbZaoK//gvxN803cNbUfTZavlcPr5zta2EMlhE0=
-			</data>
-		</dict>
-		<key>Modules/Alamofire.swiftmodule/i386.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KfiY/N/BLt1W0osmEnaU/IsK53w=
-			</data>
-			<key>hash2</key>
-			<data>
-			ebLFTPEzox3bod8S13UOkKelHGywIeBKUaQw8CSzDzw=
-			</data>
-		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DILXX2sUyqb5dZXpapHbAgFcQZ4=
+			yzUq/mn9WFwitd+SZmt0jJbqyfc=
 			</data>
 			<key>hash2</key>
 			<data>
-			FQdeviV63ypyyaMe1MeNmkju01sNft4QLci0ylt3Cys=
+			n6rv6ZVgYrSOLasUNAkE37t1mDzDwS0WMYX/5GkLUMk=
 			</data>
 		</dict>
 		<key>Modules/Alamofire.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			E4TA6EeXODw24KDsYHSraskh8d4=
+			217wkQjNJg7dQ+5ZkMp0JMWEaA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			M1yF/czl/2mMCvvaFgNO0VTYLn5zWorbPQTC+ZnAQSI=
+			QNNd1m9otBlOAHjvtrzzc8idMvlWzbX+LUx3qlVEVeM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

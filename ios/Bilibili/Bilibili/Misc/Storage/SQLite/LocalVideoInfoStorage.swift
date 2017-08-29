@@ -37,8 +37,6 @@ class LocalVideoInfoStorage: IStorage
         
     }
     
-    
-    
     //MARK: Nested Classes
     
     class InfosTable

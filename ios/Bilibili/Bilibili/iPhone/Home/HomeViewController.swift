@@ -9,6 +9,7 @@
 import UIKit
 import React
 import SnapKit
+import Sakura
 
 class HomeViewController: UIViewController
 {
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController
         button.setTitle("Test", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         button.addTarget(self, action: #selector(onButtonClick(button:)), for: .touchUpInside)
+        button.extraHitInsets = UIEdgeInsets(top: 500, left: 500, bottom: 500, right: 500)
         view.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.centerX.centerY.equalTo(view)
@@ -39,11 +41,15 @@ class HomeViewController: UIViewController
     //Callback
     
     @objc func onButtonClick(button: UIButton) {
-        NSLog("Hello")
+//        showReactView()
+        showCommentsView()
+    }
+    
+    func showReactView() {
         let jsCodeLocation = URL(string: Strings.REACT_NATIVE_URL)
         let mockData:NSDictionary = ["scores": [
-                ["name":"Alex", "value":"42"],
-                ["name":"Joel", "value":"10"]
+            ["name":"Alex", "value":"42"],
+            ["name":"Joel", "value":"10"]
             ]
         ]
         
@@ -55,7 +61,13 @@ class HomeViewController: UIViewController
         )
         let vc = UIViewController()
         vc.view = rootView
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showCommentsView() {
+//        let controller = CommentViewController(aid: 13599724)
+        let controller = BangumiViewController(seasonID: 1539)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

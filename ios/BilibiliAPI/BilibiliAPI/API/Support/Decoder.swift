@@ -18,7 +18,6 @@ extension JSONDecoder
         throw DecodingError.typeMismatch(type, .init(codingPath: [],
                                                      debugDescription: "Invalid JSON."))
     }
-    
 }
 
 extension Decodable
@@ -38,9 +37,9 @@ extension Decodable
         return try decoder.decode([Self].self, from: json)
     }
     
-    static func array(from dict: [AnyHashable:Any]) throws -> [Self] {
+    static func array(from array: [Any]) throws -> [Self] {
         let decoder = JSONDecoder()
-        return try decoder.decode([Self].self, from: dict.json)
+        return try decoder.decode([Self].self, from: array.json)
     }
     
 }

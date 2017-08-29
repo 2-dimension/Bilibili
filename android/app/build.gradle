@@ -2,17 +2,27 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 25
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.yaesakura.bilibili"
+        applicationId "com.lunareclipse.bilibili"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         //multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+
+        packagingOptions {
+            exclude "lib/arm64-v8a/librealm-jni.so"
+        }
+
     }
+
 
     buildTypes {
         release {
@@ -43,10 +53,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:support-v4:25.3.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.alibaba:fastjson:1.2.15'
     compile 'com.github.ctiao:DanmakuFlameMaster:0.3.8'
@@ -56,4 +66,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.beardedhen:androidbootstrap:2.3.0'
     compile 'com.makeramen:roundedimageview:2.2.1'
+    compile "com.facebook.react:react-native:+"
 }

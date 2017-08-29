@@ -63,7 +63,7 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <com.yaesakura.bilibili.ui.home.RoundViewPager
+    <com.lunareclipse.bilibili.ui.home.RoundViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/viewpager"
         android:layout_width="wrap_content"

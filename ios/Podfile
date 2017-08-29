@@ -13,16 +13,16 @@ def pods
    pod 'Kingfisher', '~> 3.10.0'
    pod 'URLNavigator', '~> 1.2.0'
    pod 'SwiftyUserDefaults', '~>3.0.0'
-   pod 'GPUImage2', :podspec => './Bilibili/Podspec/GPUImage2.podspec'
+   pod 'Hero', '~> 0.3.6'
    pod 'SQLite.swift', :git => 'https://github.com/949886/SQLite.swift.git'
    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
    pod 'CryptoSwift', :git => 'https://github.com/krzyzanowskim/CryptoSwift.git', :branch => 'develop'
-   
-   pod 'Hero', '~> 0.3.6'
+   #pod 'GPUImage2', :podspec => './Bilibili/Podspec/GPUImage2.podspec'
    
    pod 'Sakura'
    
    #Frameworks - OC
+   pod 'GPUImage', '~>0.1.7'
    pod 'lottie-ios', '~>1.0'
    pod 'MJRefresh', '~>3.1.0'
    pod 'WebViewJavascriptBridge', '~> 6.0.0'
@@ -37,14 +37,19 @@ end
 
 def react_native
 
-  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+  pod 'React', :subspecs => [
     'Core',
     'DevSupport',
     'BatchedBridge',
     'RCTText',
     'RCTNetwork',
-    'RCTWebSocket'
-  ]
+    'RCTWebSocket',
+    'RCTActionSheet',
+    'RCTImage',
+    'RCTPushNotification',
+    'RCTLinkingIOS',
+    'RCTVibration',
+  ], :path => '../node_modules/react-native'
 
   pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
 

@@ -13,6 +13,13 @@
 		98CA573D1F138BF800E4B370 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573A1F138BF300E4B370 /* LoadingViewController.swift */; };
 		98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */; };
 		DF167FE21F0220BB004079A4 /* LocalVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF167FE11F0220BB004079A4 /* LocalVideoInfo.swift */; };
+		DF191F461F54371000675718 /* BangumiRelatedRecViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF191F451F54360C00675718 /* BangumiRelatedRecViewCell.xib */; };
+		DF1EFAA71F52D623002D20F6 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1F79251F4E85F2000C7973 /* CommentCell.xib */; };
+		DF1EFAAD1F52DF43002D20F6 /* BangumiEpisodesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1EFAA91F52DF3C002D20F6 /* BangumiEpisodesCollectionViewCell.xib */; };
+		DF1EFAAF1F52DF43002D20F6 /* BangumiSponsorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1EFAAC1F52DF3C002D20F6 /* BangumiSponsorView.xib */; };
+		DF1F79281F4E8960000C7973 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3D341F4D999300346AFB /* CommentViewController.swift */; };
+		DF2D86361F4E914C004B5946 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F79261F4E85FF000C7973 /* CommentCell.swift */; };
+		DF3C91E51F50330400D994CB /* BangumiHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */; };
 		DF4D79881F0AB1BA0037A3D8 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79861F0AB1B50037A3D8 /* RootNavigationController.swift */; };
 		DF4D79891F0AB1BA0037A3D8 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79871F0AB1B50037A3D8 /* RootTabBarController.swift */; };
 		DF50307D1EFD628B0083A75F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50307C1EFD628B0083A75F /* Strings.swift */; };
@@ -34,6 +41,14 @@
 		DF82269F1E697DB400C88679 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82269E1E697DB400C88679 /* R.generated.swift */; };
 		DF8226A01E697DE300C88679 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A21E697DE300C88679 /* Localizable.strings */; };
 		DF8226A51E697E0500C88679 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A71E697E0500C88679 /* Localizable.stringsdict */; };
+		DF9A5F151F502AE6009E3AC6 /* BangumiHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */; };
+		DF9ABBEB1F52F197002F997B /* BangumiEpisodesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAB01F52E2FE002D20F6 /* BangumiEpisodesCollectionView.swift */; };
+		DF9ABBEC1F52F197002F997B /* BangumiSeasonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAB21F52E316002D20F6 /* BangumiSeasonsCollectionView.swift */; };
+		DF9ABBED1F52F197002F997B /* BangumiSponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAAB1F52DF3C002D20F6 /* BangumiSponsorView.swift */; };
+		DF9ABBEF1F532CEE002F997B /* BangumiTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9ABBEE1F532CEE002F997B /* BangumiTagsView.swift */; };
+		DF9ABBF31F53D059002F997B /* BangumiRelatedRecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9ABBF21F53D059002F997B /* BangumiRelatedRecView.swift */; };
+		DF9ABBF41F53DC62002F997B /* BangumiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3D2E1F4D944800346AFB /* BangumiViewController.swift */; };
+		DFA6BDDF1F5533A200015C3D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA6BDDE1F5533A200015C3D /* UIViewExtension.swift */; };
 		DFB751CC1F012462007EA1F2 /* BilibiliSystemMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB751CB1F012462007EA1F2 /* BilibiliSystemMessage.swift */; };
 		DFBC918A1F19188B005262AF /* BilibiliAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC91891F19188B005262AF /* BilibiliAPITests.swift */; };
 		DFD6FB261F0519DE00C39B45 /* BaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD6FB251F0519DE00C39B45 /* BaseStorage.swift */; };
@@ -44,6 +59,15 @@
 		DFDFF5C01EFDA1A900CB5340 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDFF5BF1EFDA1A900CB5340 /* DiscoverViewController.swift */; };
 		DFDFF5C21EFDA1B500CB5340 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDFF5C11EFDA1B500CB5340 /* CategoryViewController.swift */; };
 		DFDFF5C41EFDA1BF00CB5340 /* AttentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDFF5C31EFDA1BF00CB5340 /* AttentionViewController.swift */; };
+		DFE6F05C1F2361BD00BD3EC2 /* Danmaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F05B1F2361BD00BD3EC2 /* Danmaku.swift */; };
+		DFE6F05E1F23623C00BD3EC2 /* DanmakuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F05D1F23623C00BD3EC2 /* DanmakuConfiguration.swift */; };
+		DFE6F0601F23625500BD3EC2 /* DanmakuUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F05F1F23625500BD3EC2 /* DanmakuUtils.swift */; };
+		DFE6F0621F23626600BD3EC2 /* DanmakuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0611F23626600BD3EC2 /* DanmakuFilter.swift */; };
+		DFE6F0641F23627C00BD3EC2 /* DanmakuTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0631F23627C00BD3EC2 /* DanmakuTracker.swift */; };
+		DFE6F0661F23629400BD3EC2 /* DanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0651F23629400BD3EC2 /* DanmakuParser.swift */; };
+		DFE6F0681F2362A600BD3EC2 /* BilibiliDanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0671F2362A600BD3EC2 /* BilibiliDanmakuParser.swift */; };
+		DFE6F06A1F2362B300BD3EC2 /* AcfunDanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0691F2362B300BD3EC2 /* AcfunDanmakuParser.swift */; };
+		DFEAD3ED1F54981100CC1B06 /* BangumiViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +100,14 @@
 		C58884E704897A6C804015C3 /* Pods-BilibiliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliTests/Pods-BilibiliTests.release.xcconfig"; sourceTree = "<group>"; };
 		D61C89C3EED9E9E8E68DDF4A /* Pods_BilibiliUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BilibiliUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF167FE11F0220BB004079A4 /* LocalVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoInfo.swift; sourceTree = "<group>"; };
+		DF191F451F54360C00675718 /* BangumiRelatedRecViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BangumiRelatedRecViewCell.xib; sourceTree = "<group>"; };
+		DF1EFAA91F52DF3C002D20F6 /* BangumiEpisodesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BangumiEpisodesCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF1EFAAB1F52DF3C002D20F6 /* BangumiSponsorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiSponsorView.swift; sourceTree = "<group>"; };
+		DF1EFAAC1F52DF3C002D20F6 /* BangumiSponsorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BangumiSponsorView.xib; sourceTree = "<group>"; };
+		DF1EFAB01F52E2FE002D20F6 /* BangumiEpisodesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiEpisodesCollectionView.swift; sourceTree = "<group>"; };
+		DF1EFAB21F52E316002D20F6 /* BangumiSeasonsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiSeasonsCollectionView.swift; sourceTree = "<group>"; };
+		DF1F79251F4E85F2000C7973 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		DF1F79261F4E85FF000C7973 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		DF4D79861F0AB1B50037A3D8 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		DF4D79871F0AB1B50037A3D8 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		DF50307C1EFD628B0083A75F /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -103,8 +135,15 @@
 		DF82269E1E697DB400C88679 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		DF8226A11E697DE300C88679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF8226A61E697E0500C88679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		DF9ABBEE1F532CEE002F997B /* BangumiTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiTagsView.swift; sourceTree = "<group>"; };
+		DF9ABBF21F53D059002F997B /* BangumiRelatedRecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiRelatedRecView.swift; sourceTree = "<group>"; };
+		DFA6BDDE1F5533A200015C3D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DFB751CB1F012462007EA1F2 /* BilibiliSystemMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BilibiliSystemMessage.swift; sourceTree = "<group>"; };
 		DFBC91891F19188B005262AF /* BilibiliAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPITests.swift; sourceTree = "<group>"; };
+		DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BangumiHeaderController.xib; sourceTree = "<group>"; };
+		DFBD3D2E1F4D944800346AFB /* BangumiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiViewController.swift; sourceTree = "<group>"; };
+		DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiHeaderController.swift; sourceTree = "<group>"; };
+		DFBD3D341F4D999300346AFB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		DFD6FB211F0519D000C39B45 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DFD6FB231F0519D000C39B45 /* LocalVideoInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoInfoStorage.swift; sourceTree = "<group>"; };
 		DFD6FB241F0519D000C39B45 /* SystemMessageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMessageStorage.swift; sourceTree = "<group>"; };
@@ -114,6 +153,15 @@
 		DFDFF5BF1EFDA1A900CB5340 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		DFDFF5C11EFDA1B500CB5340 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		DFDFF5C31EFDA1BF00CB5340 /* AttentionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttentionViewController.swift; sourceTree = "<group>"; };
+		DFE6F05B1F2361BD00BD3EC2 /* Danmaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Danmaku.swift; sourceTree = "<group>"; };
+		DFE6F05D1F23623C00BD3EC2 /* DanmakuConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuConfiguration.swift; sourceTree = "<group>"; };
+		DFE6F05F1F23625500BD3EC2 /* DanmakuUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuUtils.swift; sourceTree = "<group>"; };
+		DFE6F0611F23626600BD3EC2 /* DanmakuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuFilter.swift; sourceTree = "<group>"; };
+		DFE6F0631F23627C00BD3EC2 /* DanmakuTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuTracker.swift; sourceTree = "<group>"; };
+		DFE6F0651F23629400BD3EC2 /* DanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuParser.swift; sourceTree = "<group>"; };
+		DFE6F0671F2362A600BD3EC2 /* BilibiliDanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliDanmakuParser.swift; sourceTree = "<group>"; };
+		DFE6F0691F2362B300BD3EC2 /* AcfunDanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcfunDanmakuParser.swift; sourceTree = "<group>"; };
+		DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BangumiViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +240,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF1EFAA81F52DF3C002D20F6 /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DF1EFAB01F52E2FE002D20F6 /* BangumiEpisodesCollectionView.swift */,
+				DF1EFAA91F52DF3C002D20F6 /* BangumiEpisodesCollectionViewCell.xib */,
+				DF1EFAB21F52E316002D20F6 /* BangumiSeasonsCollectionView.swift */,
+				DF1EFAAB1F52DF3C002D20F6 /* BangumiSponsorView.swift */,
+				DF1EFAAC1F52DF3C002D20F6 /* BangumiSponsorView.xib */,
+				DF9ABBF21F53D059002F997B /* BangumiRelatedRecView.swift */,
+				DF191F451F54360C00675718 /* BangumiRelatedRecViewCell.xib */,
+				DF9ABBEE1F532CEE002F997B /* BangumiTagsView.swift */,
+			);
+			path = subviews;
+			sourceTree = "<group>";
+		};
+		DF2EB6921F23608500E99259 /* Danmaku */ = {
+			isa = PBXGroup;
+			children = (
+				DF2EB6931F23608500E99259 /* Common */,
+				DF2EB6941F23608500E99259 /* Parser */,
+				DF2EB6951F23608500E99259 /* UI */,
+				DF2EB6961F23608500E99259 /* Utils */,
+			);
+			path = Danmaku;
+			sourceTree = "<group>";
+		};
+		DF2EB6931F23608500E99259 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DFE6F05B1F2361BD00BD3EC2 /* Danmaku.swift */,
+				DFE6F05D1F23623C00BD3EC2 /* DanmakuConfiguration.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DF2EB6941F23608500E99259 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				DFE6F0651F23629400BD3EC2 /* DanmakuParser.swift */,
+				DFE6F0671F2362A600BD3EC2 /* BilibiliDanmakuParser.swift */,
+				DFE6F0691F2362B300BD3EC2 /* AcfunDanmakuParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		DF2EB6951F23608500E99259 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DF2EB6961F23608500E99259 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DFE6F05F1F23625500BD3EC2 /* DanmakuUtils.swift */,
+				DFE6F0611F23626600BD3EC2 /* DanmakuFilter.swift */,
+				DFE6F0631F23627C00BD3EC2 /* DanmakuTracker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		DF4D79851F0AB1B50037A3D8 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +343,7 @@
 		DF77E5AA1EFD28CD00DD3209 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DFA6BDDE1F5533A200015C3D /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -314,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				98CA57381F138BF300E4B370 /* UI */,
+				DF2EB6921F23608500E99259 /* Danmaku */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -326,8 +438,8 @@
 				DFDFF5B61EFD9ACD00CB5340 /* Category */,
 				DFDFF5B41EFD9ACD00CB5340 /* Discover */,
 				DFDFF5B81EFD9ACD00CB5340 /* Home */,
-				DFDFF5B31EFD9ACD00CB5340 /* Others */,
 				DFDFF5B51EFD9ACD00CB5340 /* Profile */,
+				DFDFF5B31EFD9ACD00CB5340 /* Others */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -382,6 +494,57 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		DFBD3D291F4D93DD00346AFB /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		DFBD3D2A1F4D93DD00346AFB /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		DFBD3D2B1F4D93DD00346AFB /* Bangumi */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD3D2C1F4D943400346AFB /* Detail */,
+			);
+			path = Bangumi;
+			sourceTree = "<group>";
+		};
+		DFBD3D2C1F4D943400346AFB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DF1EFAA81F52DF3C002D20F6 /* subviews */,
+				DFBD3D2E1F4D944800346AFB /* BangumiViewController.swift */,
+				DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */,
+				DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */,
+				DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DFBD3D321F4D996E00346AFB /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		DFBD3D331F4D997F00346AFB /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD3D341F4D999300346AFB /* CommentViewController.swift */,
+				DF1F79251F4E85F2000C7973 /* CommentCell.xib */,
+				DF1F79261F4E85FF000C7973 /* CommentCell.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		DFD6FB201F0519D000C39B45 /* Defaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +575,8 @@
 			isa = PBXGroup;
 			children = (
 				DF4D79851F0AB1B50037A3D8 /* Root */,
+				DFBD3D331F4D997F00346AFB /* Comment */,
+				DFBD3D321F4D996E00346AFB /* Video */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -451,6 +616,9 @@
 		DFDFF5B81EFD9ACD00CB5340 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DFBD3D2B1F4D93DD00346AFB /* Bangumi */,
+				DFBD3D291F4D93DD00346AFB /* Live */,
+				DFBD3D2A1F4D93DD00346AFB /* Recommend */,
 				DFDFF5BD1EFDA19E00CB5340 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -535,7 +703,7 @@
 				TargetAttributes = {
 					DF8226521E696A3E00C88679 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = V667438P6G;
+						DevelopmentTeam = WHFYY29THE;
 						ProvisioningStyle = Automatic;
 					};
 					DF8226681E696A3E00C88679 = {
@@ -577,9 +745,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3C91E51F50330400D994CB /* BangumiHeaderController.xib in Resources */,
 				DF8226631E696A3E00C88679 /* LaunchScreen.storyboard in Resources */,
+				DF1EFAA71F52D623002D20F6 /* CommentCell.xib in Resources */,
 				DF8226A01E697DE300C88679 /* Localizable.strings in Resources */,
+				DF191F461F54371000675718 /* BangumiRelatedRecViewCell.xib in Resources */,
+				DF1EFAAF1F52DF43002D20F6 /* BangumiSponsorView.xib in Resources */,
+				DF1EFAAD1F52DF43002D20F6 /* BangumiEpisodesCollectionViewCell.xib in Resources */,
 				DF8226601E696A3E00C88679 /* Assets.xcassets in Resources */,
+				DFEAD3ED1F54981100CC1B06 /* BangumiViewController.storyboard in Resources */,
 				DF8226A51E697E0500C88679 /* Localizable.stringsdict in Resources */,
 				DF5B31551EA760A40029E181 /* iPhone.storyboard in Resources */,
 			);
@@ -772,12 +946,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9ABBEB1F52F197002F997B /* BangumiEpisodesCollectionView.swift in Sources */,
+				DFE6F05C1F2361BD00BD3EC2 /* Danmaku.swift in Sources */,
+				DFA6BDDF1F5533A200015C3D /* UIViewExtension.swift in Sources */,
 				DFB751CC1F012462007EA1F2 /* BilibiliSystemMessage.swift in Sources */,
+				DFE6F05E1F23623C00BD3EC2 /* DanmakuConfiguration.swift in Sources */,
+				DFE6F0641F23627C00BD3EC2 /* DanmakuTracker.swift in Sources */,
+				DF1F79281F4E8960000C7973 /* CommentViewController.swift in Sources */,
 				DF4D79891F0AB1BA0037A3D8 /* RootTabBarController.swift in Sources */,
+				DFE6F0681F2362A600BD3EC2 /* BilibiliDanmakuParser.swift in Sources */,
 				DF50308E1EFD67100083A75F /* Emoticon.swift in Sources */,
+				DF9ABBF41F53DC62002F997B /* BangumiViewController.swift in Sources */,
+				DF2D86361F4E914C004B5946 /* CommentCell.swift in Sources */,
 				DFD6FB271F05201600C39B45 /* LocalVideoInfoStorage.swift in Sources */,
 				DF4D79881F0AB1BA0037A3D8 /* RootNavigationController.swift in Sources */,
 				DF167FE21F0220BB004079A4 /* LocalVideoInfo.swift in Sources */,
+				DF9ABBED1F52F197002F997B /* BangumiSponsorView.swift in Sources */,
+				DFE6F06A1F2362B300BD3EC2 /* AcfunDanmakuParser.swift in Sources */,
 				DFDFF5BC1EFDA19100CB5340 /* ProfileViewController.swift in Sources */,
 				98CA573D1F138BF800E4B370 /* LoadingViewController.swift in Sources */,
 				DF5030811EFD655D0083A75F /* Notifications.swift in Sources */,
@@ -787,15 +972,22 @@
 				DF50308F1EFD67100083A75F /* EmoticonKeyboard.swift in Sources */,
 				DF50307D1EFD628B0083A75F /* Strings.swift in Sources */,
 				DFDFF5C21EFDA1B500CB5340 /* CategoryViewController.swift in Sources */,
+				DFE6F0621F23626600BD3EC2 /* DanmakuFilter.swift in Sources */,
+				DFE6F0601F23625500BD3EC2 /* DanmakuUtils.swift in Sources */,
 				DF5030841EFD65E50083A75F /* Theme.swift in Sources */,
 				DF8226971E696D4A00C88679 /* Account.swift in Sources */,
 				DF8226941E696D4A00C88679 /* AppDelegate.swift in Sources */,
 				98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */,
 				DF5030911EFD67100083A75F /* EmoticonParser.swift in Sources */,
 				DFD6FB281F05202700C39B45 /* SystemMessageStorage.swift in Sources */,
+				DF9ABBEF1F532CEE002F997B /* BangumiTagsView.swift in Sources */,
 				DF5030901EFD67100083A75F /* EmoticonManager.swift in Sources */,
 				DF82269F1E697DB400C88679 /* R.generated.swift in Sources */,
+				DFE6F0661F23629400BD3EC2 /* DanmakuParser.swift in Sources */,
+				DF9ABBEC1F52F197002F997B /* BangumiSeasonsCollectionView.swift in Sources */,
+				DF9A5F151F502AE6009E3AC6 /* BangumiHeaderController.swift in Sources */,
 				DFD6FB261F0519DE00C39B45 /* BaseStorage.swift in Sources */,
+				DF9ABBF31F53D059002F997B /* BangumiRelatedRecView.swift in Sources */,
 				DFDFF5C01EFDA1A900CB5340 /* DiscoverViewController.swift in Sources */,
 				DF5030861EFD65F00083A75F /* ThemeManager.swift in Sources */,
 			);
@@ -980,7 +1172,7 @@
 			baseConfigurationReference = 47F79A037D40E834E5A41379 /* Pods-Bilibili.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V667438P6G;
+				DEVELOPMENT_TEAM = WHFYY29THE;
 				INFOPLIST_FILE = "$(SRCROOT)/Bilibili/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -995,7 +1187,7 @@
 			baseConfigurationReference = A88E28E78B94EE9CE34D6DE5 /* Pods-Bilibili.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = V667438P6G;
+				DEVELOPMENT_TEAM = WHFYY29THE;
 				INFOPLIST_FILE = "$(SRCROOT)/Bilibili/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

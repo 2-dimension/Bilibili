@@ -5,3 +5,58 @@
   Created by YaeSakura on 2017/3/3.
   Copyright © 2017年 YaeSakura. All rights reserved.
 */
+
+"ok"        = "确定";
+"cancle"    = "取消";
+
+"home.live.more.info" = "当前%ld个直播，进去看看";
+
+"home.recommend.more.info" = "更多%@";
+
+"home.bangumi.segment1.title" = "新番连载";
+"home.bangumi.segment1.more.info" = "更多连载";
+"home.bangumi.segment2.title" = "%d月新番";
+"home.bangumi.segment2.more.info" = "分季列表";
+"home.bangumi.segment3.title" = "番剧推荐";
+"home.bangumi.segment3.more.info" = " ";
+"home.bangumi.viewers" = "%@人在看";
+"home.bangumi.followers" = "%@人追番";
+"home.bangumi.current.episode" = "更新至第%d话";
+"home.bangumi.recommend.title" = "番剧推荐";
+
+"video.relative.upper" = "Up主:  %@";
+"video.relative.playCount" = "播放:  %ld";
+"video.relative.danmakuCount" = "弹幕:  %ld";
+"video.actionSheet.report" = "举报";
+
+"bangumi.title" = "番剧详情";
+"bangumi.unfinished" = "连载中，每周%@更新";
+"bangumi.finished" = "已完结";
+"bangumi.status" = "播放：%@  订阅：%@";
+"bangumi.episode" = "第 %ld 话";
+"bangumi.choose.episodes" = "选集 （%ld）";
+"bangumi.update" = "更新 第 %ld 话";
+"bangumi.update.finished" = "全 %ld 话";
+"bangumi.comments" = "第 %ld 话 评论 (%ld)";
+"bangumi.sponsors" = "已有%ld人承包了这部番";
+"bangumi.no.sponsors" = "暂无人承包";
+"bangumi.sponsors.weekly" = "等%ld人七日内承包";
+"bangumi.no.sponsors.weekly" = "快来抢占七日榜(ﾟДﾟ≡ﾟдﾟ)!?";
+
+"comment.more.hot.comments" = "更多热门评论>>";
+"comment.actionSheet.report" = "举报";
+
+"profile.user.center" = "个人中心";
+"profile.user.message" = "我的消息";
+"profile.download" = "离线缓存";
+"profile.history" = "历史记录";
+"profile.favorite" = "我的收藏";
+"profile.follow" = "我的关注";
+"profile.wallet" = "我的钱包";
+"profile.gamecenter" = "游戏中心";
+"profile.theme" = "主题选择";
+"profile.answer.message" = "回复我的";
+"profile.at.me" = "@我";
+"profile.received.likes" = "收到的赞";
+"profile.private.message" = "私信";
+"profile.system.notification" = "系统通知";

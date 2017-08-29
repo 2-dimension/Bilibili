@@ -9,11 +9,14 @@
 import Foundation
 import CommonCrypto
 
-let APP_KEY     = "c1b107428d337928"
-let APP_SECRET  = "ea85624dfcf12d7cc7b2b3a94fac1f2c"
+//let APP_KEY     = "84956560bc028eb7"
+//let APP_SECRET  = "94aba54af9065f71de72f5508f1cd42e"
 
 class BilibiliAuth
 {
+    static var APP_KEY     = "c1b107428d337928"
+    static var APP_SECRET  = "ea85624dfcf12d7cc7b2b3a94fac1f2c"
+    
     static func generateSign(_ parameters: [String:Any]) -> String {
         
         let sortedKeys = parameters.keys.sorted(by: <)

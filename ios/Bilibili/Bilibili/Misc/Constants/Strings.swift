@@ -9,5 +9,6 @@
 import Foundation
 
 struct Strings {
-    static let REACT_NATIVE_URL = "http://localhost:8081/index.ios.bundle?platform=ios"
+//    static let REACT_NATIVE_URL = "http://localhost:8081/index.ios.bundle?platform=ios"
+    static let REACT_NATIVE_URL = "http://192.168.1.140:8081/index.ios.bundle?platform=ios"
 }

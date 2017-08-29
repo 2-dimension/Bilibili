@@ -10,29 +10,29 @@ import Foundation
 
 public struct Video: Codable
 {
-    let aid: Int
-    let attribute: Int
-    let copyright: Int
-    let ctime: Int
-    let desc: String
-    let duration: Int
-    let pic: String
-    let pubdate: Int
-    let redirectUrl: String
-    let state: Int
-    let tags: String?
-    let tid: Int
-    let videos: Int
-    let title: String
-    let tname: String
+    public var aid: Int
+    public var attribute: Int
+    public var copyright: Int
+    public var ctime: Int
+    public var desc: String
+    public var duration: Int
+    public var pic: String
+    public var pubdate: Int
+    public var redirectUrl: String
+    public var state: Int
+    public var tags: String?
+    public var tid: Int
+    public var videos: Int
+    public var title: String
+    public var tname: String
     
-    let owner: Owner
-    let season: Season
-//    let relates: Video
-    let rights: Rights
-    let stat: Stat
+    public var owner: Owner
+    public var season: Season
+//    public var relates: Video
+    public var rights: Rights
+    public var stat: Stat
     
-    let pages: [Page]
+    public var pages: [Page]
     
     private enum CodingKeys: String, CodingKey {
         case aid
@@ -59,16 +59,16 @@ public struct Video: Codable
     }
     
     public struct Stat: Codable {
-        let aid: Int
-        let coin: Int
-        let danmaku: Int
-        let favorite: Int
-        let hisRank: Int
-        let like: Int
-        let nowRank: Int
-        let reply: Int
-        let share: Int
-        let view: Int
+        public var aid: Int
+        public var coin: Int
+        public var danmaku: Int
+        public var favorite: Int
+        public var hisRank: Int
+        public var like: Int
+        public var nowRank: Int
+        public var reply: Int
+        public var share: Int
+        public var view: Int
         
         private enum CodingKeys: String, CodingKey {
             case aid
@@ -85,36 +85,36 @@ public struct Video: Codable
     }
     
     public struct Owner: Codable {
-        let face: String
-        let mid: Int
-        let name: String
+        public var face: String
+        public var mid: Int
+        public var name: String
     }
     
     public struct Page: Codable {
-        let cid: Int
-        let duration: Int
-        let from: String
-        let page: Int
-        let part: String
-        let vid: String
-        let weblink: String
-        let metas: [Meta]
+        public var cid: Int
+        public var duration: Int
+        public var from: String
+        public var page: Int
+        public var part: String
+        public var vid: String
+        public var weblink: String
+        public var metas: [Meta]
         
         public struct Meta: Codable {
-            let size: Int64
-            let quality: Int
-            let format: String
+            public var size: Int64
+            public var quality: Int
+            public var format: String
         }
     }
     
     public struct Rights: Codable {
-        let bp: Int
-        let download: Int
-        let elec: Int
-        let hd5: Int
-        let movie: Int
-        let noReprint: Int
-        let pay: Int
+        public var bp: Int
+        public var download: Int
+        public var elec: Int
+        public var hd5: Int
+        public var movie: Int
+        public var noReprint: Int
+        public var pay: Int
         
         private enum CodingKeys: String, CodingKey {
             case bp
@@ -128,7 +128,17 @@ public struct Video: Codable
     }
     
     public struct History: Codable {
-        let cid: UInt64
-        let progress: Double
+        public var cid: UInt64
+        public var progress: Double
+    }
+}
+
+extension Video
+{
+    public enum Quality: Int {
+        case low = 1    //流畅
+        case normal     //高清
+        case high       //超清
+        case HD         //1080HD
     }
 }

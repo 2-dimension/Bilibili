@@ -14,44 +14,35 @@ import BilibiliAPI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     // Mark: Life Cycle
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        BilibiliAPI.getVideoInfo(aid: 12104863, success: { (response) in
-            if  let result = response.result,
-                let data = try? JSONEncoder().encode(result) {
-                let desc = String(data: data, encoding: .utf8)
-                print(desc ?? "NIL")
-            }
-        }, failure: { (response) in
-            print("Request failed. \(response)")
-        })
-        
         setup()
+        //test()
         
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         
     }
@@ -134,6 +125,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setup() {
         //FIXME: Method not implemented.
+        
+        // Setup exception handler.
+        NSSetUncaughtExceptionHandler { (exception) in
+            print("Exception: \(exception.name)")
+            print("Reason: \(exception.reason ?? "")")
+            print("Call Stack:")
+            for symbol in exception.callStackSymbols {
+                print(symbol)
+            }
+        }
+    }
+    
+    private func test() {
+        BilibiliAPI.getVideoInfo(aid: 12104863, success: { (response) in
+            if  var result = response.result,
+                let data = try? JSONEncoder().encode(result) {
+                result.title = "dsaa"
+                let desc = String(data: data, encoding: .utf8)
+                print(desc ?? "NIL")
+            }
+        }, failure: { (response) in
+            print("Request failed. \(response)")
+        })
     }
     
 }

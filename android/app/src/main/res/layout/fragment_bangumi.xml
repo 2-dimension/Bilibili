@@ -2,7 +2,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.yaesakura.bilibili.ui.home.bangumi.BangumiFragment">
+             tools:context="com.lunareclipse.bilibili.ui.home.bangumi.BangumiFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
