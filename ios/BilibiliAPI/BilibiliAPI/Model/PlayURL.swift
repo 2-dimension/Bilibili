@@ -53,7 +53,7 @@ public struct PlayURL: Codable
 public struct LivePlayURL: Codable
 {
     public var currentQuality: Int
-    public var acceptQualities: [String]
+    public var acceptQualities: [Int]
     public var dowloadURLs: [Durl]
     
     public struct Durl: Codable {

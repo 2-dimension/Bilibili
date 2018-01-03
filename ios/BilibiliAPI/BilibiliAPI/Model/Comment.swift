@@ -50,7 +50,7 @@ open class Comment: Codable
         public var officialVerify: UserInfo.OfficialVerify
         public var pendant: UserInfo.Pendant
         public var rank: String
-        public var regYear: String
+        public var regYear: String?
         public var sex: String
         public var sign: String
         public var uname: String

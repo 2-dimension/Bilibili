@@ -103,14 +103,13 @@ class BangumiEpisodesCollectionViewCell: UICollectionViewCell
         }
     }
     
-    func setup(_ episode: Episode) {
-        self.episode = episode
-        episodeLabel.text = R.string.localizable.bangumiEpisode(episode.index)
-        titleLabel.text = episode.indexTitle
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.layer.cornerRadius = 4
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderWidth = 1.0 / UIScreen.main.scale
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -118,7 +117,14 @@ class BangumiEpisodesCollectionViewCell: UICollectionViewCell
         if episode == nil {
             return
         }
-//        let controller = VideoViewController(aid: episode.av_id, episodeID: episode.episode_id)
-//        navigationController?.pushViewController(controller as? UIViewController ?? UIViewController(), animated: true)
+        //let controller = VideoViewController(aid: episode.av_id, episodeID: episode.episode_id)
+        //navigationController?.pushViewController(controller as? UIViewController ?? UIViewController(), animated: true)
     }
+    
+    func setup(_ episode: Episode) {
+        self.episode = episode
+        episodeLabel.text = R.string.localizable.bangumiEpisode(episode.index)
+        titleLabel.text = episode.indexTitle
+    }
+
 }

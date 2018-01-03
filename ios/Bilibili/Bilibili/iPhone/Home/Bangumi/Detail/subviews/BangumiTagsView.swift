@@ -73,10 +73,7 @@ class BangumiTagsViewCell: UICollectionViewCell
     var bangumiTag: Tag?
     var label: UILabel = UILabel(frame: .zero)
     
-    func setup(_ tag: Tag) {
-        self.bangumiTag = tag
-        label.text = tag.name
-    }
+    //MARK: Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,17 +91,32 @@ class BangumiTagsViewCell: UICollectionViewCell
         self.layer.borderColor = UIColor.lightGray.cgColor
         
         label.frame = self.bounds
-        label.font = UIFont.systemFont(ofSize: 13, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = UIColor.lightGray
         self.addSubview(label)
     }
     
+    //MARK: Override
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = height * 0.5
         label.sizeToFit()
         label.centerX = width * 0.5
         label.centerY = height * 0.5
     }
+    
+    override func willMove(toWindow newWindow: UIWindow?) {
+        if newWindow != nil {
+            self.layer.cornerRadius = height * 0.5
+        }
+    }
+    
+    // MARK: - Public
+    
+    func setup(_ tag: Tag) {
+        self.bangumiTag = tag
+        label.text = tag.name
+    }
+    
 }
 

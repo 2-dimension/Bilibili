@@ -10,10 +10,11 @@ import UIKit
 import CoreSpotlight
 import UserNotifications
 import URLNavigator
+import Sakura
 import BilibiliAPI
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     
@@ -24,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setup()
         //test()
         
+//        UIApplication.shared.applicationIconBadgeNumber = 1
+//        let badgeNumber = UIApplication.shared.applicationIconBadgeNumber//.value(forKey: "applicationIconBadgeNumber")
+//        print("badgeNumber: \(badgeNumber)")
         return true
     }
     
@@ -40,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        
+//        UIApplication.shared.applicationIconBadgeNumber = 5
+        self.setApplicationBadgeNumber(badgeNumber: 1)
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -53,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
         // URLNavigator Handler
-        if Navigator.open(url) {
+        if Navigator.default.open(url.absoluteString) {
             return true
         }
         
@@ -63,8 +68,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         
         // Spotlight
-        if userActivity.activityType == CSSearchableItemActionType {
-            
+        if #available(iOS 9.0, *) {
+            if userActivity.activityType == CSSearchableItemActionType {
+                
+            }
         }
         
         // Universal links
@@ -123,20 +130,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK: Encapsulation
     
-    private func setup() {
-        //FIXME: Method not implemented.
-        
-        // Setup exception handler.
-        NSSetUncaughtExceptionHandler { (exception) in
-            print("Exception: \(exception.name)")
-            print("Reason: \(exception.reason ?? "")")
-            print("Call Stack:")
-            for symbol in exception.callStackSymbols {
-                print(symbol)
-            }
-        }
-    }
-    
     private func test() {
         BilibiliAPI.getVideoInfo(aid: 12104863, success: { (response) in
             if  var result = response.result,
@@ -148,6 +141,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }, failure: { (response) in
             print("Request failed. \(response)")
         })
+    }
+    
+    private func setup() {
+        
+        //Misc
+        registerNotification()
+        
+        // Setup exception handler.
+        NSSetUncaughtExceptionHandler { (exception) in
+            print("Exception: \(exception.name)")
+            print("Reason: \(exception.reason ?? "")")
+            print("Call Stack:")
+            for symbol in exception.callStackSymbols {
+                print(symbol)
+            }
+        }
+        
+        
+        #if DEBUG
+            DispatchQueue.main.async { [unowned self] in
+                let fpsView = UISystemStatus();
+                fpsView.x = 25;
+                fpsView.centerY = self.window!.height - 75;
+                self.window!.addSubview(fpsView)
+            }
+        #endif
+    }
+    
+    private func registerNotification() {
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (isGranted, error) in
+                if isGranted {
+                    /* 允许通知 */
+                } else {
+                    /* 不允许通知 */
+                }
+            })
+        } else {
+            let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
+    
+    //MARK: Method
+    
+    func setApplicationBadgeNumber(badgeNumber: Int) {
+        if #available(iOS 9.0, *) {
+            let settings = UIApplication.shared.currentUserNotificationSettings;
+            if settings?.types.contains(.badge) ?? false {
+                UIApplication.shared.applicationIconBadgeNumber = badgeNumber
+            } else {
+                #if DEBUG
+                    print("Access denied for UIUserNotificationTypeBadge.")
+                #endif
+            }
+        } else {
+            UIApplication.shared.applicationIconBadgeNumber = badgeNumber
+        }
     }
     
 }

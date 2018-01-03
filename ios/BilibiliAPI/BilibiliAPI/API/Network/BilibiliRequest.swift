@@ -18,7 +18,7 @@ open class BilibiliRequest
     ///   - url: Request URL.
     ///   - method: HTTP method.
     ///   - parameters: Request parameters.
-    ///   - configs: <#Configs#>
+    ///   - configs: Request configuration.
     ///   - success: Success callback closure.
     ///   - failure: Failure callback closure.
     public static func request<T: Decodable>(
@@ -74,7 +74,7 @@ open class BilibiliRequest
     ///   - url: Request URL.
     ///   - method: HTTP method.
     ///   - parameters: Request parameters.
-    ///   - configs: <#Configs#>
+    ///   - configs: Request configuration.
     ///   - success: Success callback closure.
     ///   - failure: Failure callback closure.
     public static func request<T: Decodable>(

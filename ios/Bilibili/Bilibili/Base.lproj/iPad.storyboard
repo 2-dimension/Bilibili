@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dn4-MA-Wmd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wVS-pP-gbL">
+            <objects>
+                <viewController id="RgW-6N-Wut" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2AI-fj-Nof"/>
+                        <viewControllerLayoutGuide type="bottom" id="aE3-J8-wwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RxO-fg-w7L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-QZ-syM">
+                                <rect key="frame" x="127" y="279" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="hd_home_search_tab" selectedImage="hd_home_search_tab_s" id="MQn-lU-UUS">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgG-sl-NoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="-391"/>
+        </scene>
+        <!--Side Bar Controller-->
+        <scene sceneID="AXG-hd-ZYc">
+            <objects>
+                <viewController id="Dn4-MA-Wmd" customClass="SideBarController" customModule="Bilibili" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZzM-NH-FfC"/>
+                        <viewControllerLayoutGuide type="bottom" id="cwm-T9-2zO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gG5-57-ZVj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tdf-WN-NxT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="6Pn-bT-oif" kind="embed" identifier="embed" id="3u4-i7-BUB"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tdf-WN-NxT" secondAttribute="trailing" id="ZQf-Xe-8uz"/>
+                            <constraint firstItem="Tdf-WN-NxT" firstAttribute="leading" secondItem="gG5-57-ZVj" secondAttribute="leading" id="kQm-1i-qi0"/>
+                            <constraint firstItem="cwm-T9-2zO" firstAttribute="top" secondItem="Tdf-WN-NxT" secondAttribute="bottom" id="kXx-ID-Y7n"/>
+                            <constraint firstItem="Tdf-WN-NxT" firstAttribute="top" secondItem="gG5-57-ZVj" secondAttribute="top" id="xmB-74-89r"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNQ-hP-dNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1968.8" y="-724.58770614692662"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8eM-nR-Xgg">
+            <objects>
+                <viewController id="dTZ-pW-5iv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iqi-HE-opz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vii-ah-2qv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WOu-9C-VPl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="hd_home_home_tab" selectedImage="hd_home_home_tab_s" id="S27-zF-0rq">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uql-Qj-PoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="-1057"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GX2-1A-uLQ">
+            <objects>
+                <tabBarController id="6Pn-bT-oif" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IFQ-Rk-vX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dTZ-pW-5iv" kind="relationship" relationship="viewControllers" id="bH2-Nq-dSl"/>
+                        <segue destination="RgW-6N-Wut" kind="relationship" relationship="viewControllers" id="fFD-aB-LTb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zU-go-SA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1210" y="-724"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hd_home_home_tab" width="16" height="16"/>
+        <image name="hd_home_home_tab_s" width="16" height="16"/>
+        <image name="hd_home_search_tab" width="16" height="16"/>
+        <image name="hd_home_search_tab_s" width="16" height="16"/>
+    </resources>
+</document>

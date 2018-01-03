@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.beardedhen:androidbootstrap-2.3.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/9f0f173f7402edce3a4527be1afd77c86151c035/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/9f0f173f7402edce3a4527be1afd77c86151c035/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.beardedhen/androidbootstrap/2.3.0/fc307b9407c780ba5e76841a5142271f84e9aeb0/androidbootstrap-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

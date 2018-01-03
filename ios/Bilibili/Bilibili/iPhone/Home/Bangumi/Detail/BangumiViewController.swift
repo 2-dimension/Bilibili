@@ -100,26 +100,26 @@ class BangumiViewController: CommentViewController
 
     // MARK: Delegate
     /* ScrollView Delegate */
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.y
-        //禁止顶部bounce
-        if offset < 0 {
-            tableView?.contentOffset = CGPoint.zero
-        }
-        
-        //更新StatusBar
-        let previousStyle: UIStatusBarStyle = statusBarStyle
-        if offset > 40 {
-            statusBarStyle = .default
-        } else {
-            statusBarStyle = .lightContent
-        }
-        if previousStyle != statusBarStyle {
-            setNeedsStatusBarAppearanceUpdate()
-        }
-        //更新navigationBar透明度
-        self.navigationBar.alpha = offset / 50
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offset = scrollView.contentOffset.y
+//        //禁止顶部bounce
+//        if offset < 0 {
+//            tableView?.contentOffset = CGPoint.zero
+//        }
+//        
+//        //更新StatusBar
+//        let previousStyle: UIStatusBarStyle = statusBarStyle
+//        if offset > 40 {
+//            statusBarStyle = .default
+//        } else {
+//            statusBarStyle = .lightContent
+//        }
+//        if previousStyle != statusBarStyle {
+//            setNeedsStatusBarAppearanceUpdate()
+//        }
+//        //更新navigationBar透明度
+//        self.navigationBar.alpha = offset / 50
+//    }
 
     // MARK: Encapsulation
     func loadBangumi(_ sid: Int) {

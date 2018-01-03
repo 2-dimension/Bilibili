@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import Kingfisher
 import BilibiliAPI
+import Sakura
 
 class CommentCell: UITableViewCell
 {
@@ -26,6 +27,18 @@ class CommentCell: UITableViewCell
     
     var comment: Comment?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.portraitImageView.omaskRadius = 18
+        self.portraitImageView.omaskColor = UIColor(hex: 0xEEEEEEFF)
+    }
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+        
+    }
+    
     func setup(_ comment: Comment?) {
         self.comment = comment
         
@@ -37,14 +50,14 @@ class CommentCell: UITableViewCell
             likesLabel.text = String((comment.like))
             repliesImageView.isHidden = comment.rcount <= 0
             repliesLabel.isHidden = comment.rcount <= 0
-            
+
             if let member = comment.member {
                 portraitImageView.kf.setImage(with: URL(string: member.avatar))
                 if member.levelInfo.currentLevel <= 9 && member.levelInfo.currentLevel >= 0 {
                     let imageName: String = "misc_level_whiteLv\(Int(member.levelInfo.currentLevel))"
                     levelImageView.image = UIImage(named: imageName)
                 }
-                
+
                 switch member.sex {
                 case "男": genderImageView.image = UIImage(named: "misc_sex_male")
                 case "女": genderImageView.image = UIImage(named: "misc_sex_female")
@@ -54,11 +67,8 @@ class CommentCell: UITableViewCell
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     @IBAction func onLikeButtonClick(_ sender: Any) {
+        
     }
     
     @IBAction func onMoreButtonClick(_ sender: Any) {

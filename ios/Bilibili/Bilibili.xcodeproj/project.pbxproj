@@ -10,6 +10,13 @@
 		0CF6813A46FD5F82AAEFB34A /* Pods_BilibiliUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61C89C3EED9E9E8E68DDF4A /* Pods_BilibiliUITests.framework */; };
 		7081C6E511BF1ED74FCF1DFD /* Pods_Bilibili.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CCD7587ED9F33B805C308C /* Pods_Bilibili.framework */; };
 		85AA3223E38682FF5F221C4D /* Pods_BilibiliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E071E5AAB526F57261B626B /* Pods_BilibiliTests.framework */; };
+		98103B691FAB06C30098BE5C /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98103B681FAB06C30098BE5C /* Navigator.swift */; };
+		984C43B11FF49987000398F8 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C43B01FF49987000398F8 /* LiveViewController.swift */; };
+		984C43B41FF499F1000398F8 /* BangumiHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C43B21FF499F1000398F8 /* BangumiHeaderController.swift */; };
+		984C43B51FF499F1000398F8 /* BangumiHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984C43B31FF499F1000398F8 /* BangumiHeaderController.xib */; };
+		98B369271F7F779E0093D228 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B369251F7F779E0093D228 /* iPad.storyboard */; };
+		98B369291F7F77DB0093D228 /* SideBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B369281F7F77DB0093D228 /* SideBarController.swift */; };
+		98B3F26E1FCFCA7700D23ECE /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98B3F26C1FCFCA7700D23ECE /* Models.xcdatamodeld */; };
 		98CA573D1F138BF800E4B370 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573A1F138BF300E4B370 /* LoadingViewController.swift */; };
 		98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */; };
 		DF167FE21F0220BB004079A4 /* LocalVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF167FE11F0220BB004079A4 /* LocalVideoInfo.swift */; };
@@ -19,7 +26,6 @@
 		DF1EFAAF1F52DF43002D20F6 /* BangumiSponsorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1EFAAC1F52DF3C002D20F6 /* BangumiSponsorView.xib */; };
 		DF1F79281F4E8960000C7973 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3D341F4D999300346AFB /* CommentViewController.swift */; };
 		DF2D86361F4E914C004B5946 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1F79261F4E85FF000C7973 /* CommentCell.swift */; };
-		DF3C91E51F50330400D994CB /* BangumiHeaderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */; };
 		DF4D79881F0AB1BA0037A3D8 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79861F0AB1B50037A3D8 /* RootNavigationController.swift */; };
 		DF4D79891F0AB1BA0037A3D8 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4D79871F0AB1B50037A3D8 /* RootTabBarController.swift */; };
 		DF50307D1EFD628B0083A75F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF50307C1EFD628B0083A75F /* Strings.swift */; };
@@ -41,7 +47,6 @@
 		DF82269F1E697DB400C88679 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82269E1E697DB400C88679 /* R.generated.swift */; };
 		DF8226A01E697DE300C88679 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A21E697DE300C88679 /* Localizable.strings */; };
 		DF8226A51E697E0500C88679 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DF8226A71E697E0500C88679 /* Localizable.stringsdict */; };
-		DF9A5F151F502AE6009E3AC6 /* BangumiHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */; };
 		DF9ABBEB1F52F197002F997B /* BangumiEpisodesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAB01F52E2FE002D20F6 /* BangumiEpisodesCollectionView.swift */; };
 		DF9ABBEC1F52F197002F997B /* BangumiSeasonsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAB21F52E316002D20F6 /* BangumiSeasonsCollectionView.swift */; };
 		DF9ABBED1F52F197002F997B /* BangumiSponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EFAAB1F52DF3C002D20F6 /* BangumiSponsorView.swift */; };
@@ -67,7 +72,6 @@
 		DFE6F0661F23629400BD3EC2 /* DanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0651F23629400BD3EC2 /* DanmakuParser.swift */; };
 		DFE6F0681F2362A600BD3EC2 /* BilibiliDanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0671F2362A600BD3EC2 /* BilibiliDanmakuParser.swift */; };
 		DFE6F06A1F2362B300BD3EC2 /* AcfunDanmakuParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE6F0691F2362B300BD3EC2 /* AcfunDanmakuParser.swift */; };
-		DFEAD3ED1F54981100CC1B06 /* BangumiViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,13 @@
 		2C9B554E8E9EA56439F71B44 /* Pods-BilibiliUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliUITests/Pods-BilibiliUITests.release.xcconfig"; sourceTree = "<group>"; };
 		47F79A037D40E834E5A41379 /* Pods-Bilibili.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bilibili.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Bilibili/Pods-Bilibili.debug.xcconfig"; sourceTree = "<group>"; };
 		79A81944F7B38A2051511A2B /* Pods-BilibiliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliTests/Pods-BilibiliTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98103B681FAB06C30098BE5C /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		984C43B01FF49987000398F8 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		984C43B21FF499F1000398F8 /* BangumiHeaderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangumiHeaderController.swift; sourceTree = "<group>"; };
+		984C43B31FF499F1000398F8 /* BangumiHeaderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BangumiHeaderController.xib; sourceTree = "<group>"; };
+		98B369261F7F779E0093D228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Bilibili/Base.lproj/iPad.storyboard; sourceTree = SOURCE_ROOT; };
+		98B369281F7F77DB0093D228 /* SideBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarController.swift; sourceTree = "<group>"; };
+		98B3F26D1FCFCA7700D23ECE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		98CA573A1F138BF300E4B370 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		9F3D8C91AFE58189A27A094E /* Pods-BilibiliUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BilibiliUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BilibiliUITests/Pods-BilibiliUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,9 +151,7 @@
 		DFA6BDDE1F5533A200015C3D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DFB751CB1F012462007EA1F2 /* BilibiliSystemMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BilibiliSystemMessage.swift; sourceTree = "<group>"; };
 		DFBC91891F19188B005262AF /* BilibiliAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliAPITests.swift; sourceTree = "<group>"; };
-		DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BangumiHeaderController.xib; sourceTree = "<group>"; };
 		DFBD3D2E1F4D944800346AFB /* BangumiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiViewController.swift; sourceTree = "<group>"; };
-		DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiHeaderController.swift; sourceTree = "<group>"; };
 		DFBD3D341F4D999300346AFB /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		DFD6FB211F0519D000C39B45 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DFD6FB231F0519D000C39B45 /* LocalVideoInfoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVideoInfoStorage.swift; sourceTree = "<group>"; };
@@ -161,7 +170,6 @@
 		DFE6F0651F23629400BD3EC2 /* DanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuParser.swift; sourceTree = "<group>"; };
 		DFE6F0671F2362A600BD3EC2 /* BilibiliDanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilibiliDanmakuParser.swift; sourceTree = "<group>"; };
 		DFE6F0691F2362B300BD3EC2 /* AcfunDanmakuParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcfunDanmakuParser.swift; sourceTree = "<group>"; };
-		DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BangumiViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,85 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		98103B671FAB06B00098BE5C /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				98103B681FAB06C30098BE5C /* Navigator.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		984C43B71FF4DE93000398F8 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		98B3691C1F7F752A0093D228 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				98B369251F7F779E0093D228 /* iPad.storyboard */,
+				98B3691D1F7F752A0093D228 /* Attention */,
+				98B3691E1F7F752A0093D228 /* Category */,
+				98B3691F1F7F752A0093D228 /* Discover */,
+				98B369201F7F752A0093D228 /* Home */,
+				98B369221F7F752A0093D228 /* Profile */,
+				98B369211F7F752A0093D228 /* Others */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		98B3691D1F7F752A0093D228 /* Attention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Attention;
+			sourceTree = "<group>";
+		};
+		98B3691E1F7F752A0093D228 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		98B3691F1F7F752A0093D228 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		98B369201F7F752A0093D228 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98B369211F7F752A0093D228 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		98B369221F7F752A0093D228 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		98B3F26B1FCFC6DC00D23ECE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				98B3F26C1FCFCA7700D23ECE /* Models.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		98CA57381F138BF300E4B370 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +306,7 @@
 			children = (
 				98CA573A1F138BF300E4B370 /* LoadingViewController.swift */,
 				98CA573B1F138BF300E4B370 /* PortraitNavigationController.swift */,
+				98B369281F7F77DB0093D228 /* SideBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +331,8 @@
 		DF1EFAA81F52DF3C002D20F6 /* subviews */ = {
 			isa = PBXGroup;
 			children = (
+				984C43B21FF499F1000398F8 /* BangumiHeaderController.swift */,
+				984C43B31FF499F1000398F8 /* BangumiHeaderController.xib */,
 				DF1EFAB01F52E2FE002D20F6 /* BangumiEpisodesCollectionView.swift */,
 				DF1EFAA91F52DF3C002D20F6 /* BangumiEpisodesCollectionViewCell.xib */,
 				DF1EFAB21F52E316002D20F6 /* BangumiSeasonsCollectionView.swift */,
@@ -353,6 +443,7 @@
 			children = (
 				DFD6FB201F0519D000C39B45 /* Defaults */,
 				DFD6FB221F0519D000C39B45 /* SQLite */,
+				98B3F26B1FCFC6DC00D23ECE /* CoreData */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -385,6 +476,7 @@
 				DF82265F1E696A3E00C88679 /* Assets.xcassets */,
 				DF8226861E696D4A00C88679 /* App */,
 				DF82268B1E696D4A00C88679 /* iPhone */,
+				98B3691C1F7F752A0093D228 /* iPad */,
 				DF82268C1E696D4A00C88679 /* Misc */,
 				DFDFF4E21EFD7F6000CB5340 /* Model */,
 				DF82268E1E696D4A00C88679 /* Module */,
@@ -447,6 +539,7 @@
 		DF82268C1E696D4A00C88679 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				98103B671FAB06B00098BE5C /* Route */,
 				DF77E5A91EFD28CD00DD3209 /* Constants */,
 				DF77E5AA1EFD28CD00DD3209 /* Extension */,
 				DF77E5AB1EFD28CD00DD3209 /* Storage */,
@@ -497,6 +590,7 @@
 		DFBD3D291F4D93DD00346AFB /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				984C43B01FF49987000398F8 /* LiveViewController.swift */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -519,11 +613,8 @@
 		DFBD3D2C1F4D943400346AFB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				DF1EFAA81F52DF3C002D20F6 /* subviews */,
 				DFBD3D2E1F4D944800346AFB /* BangumiViewController.swift */,
-				DFEAD3EC1F54981100CC1B06 /* BangumiViewController.storyboard */,
-				DFBD3D301F4D98DA00346AFB /* BangumiHeaderController.swift */,
-				DFBD3D2D1F4D943400346AFB /* BangumiHeaderController.xib */,
+				DF1EFAA81F52DF3C002D20F6 /* subviews */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -576,6 +667,7 @@
 			children = (
 				DF4D79851F0AB1B50037A3D8 /* Root */,
 				DFBD3D331F4D997F00346AFB /* Comment */,
+				984C43B71FF4DE93000398F8 /* Player */,
 				DFBD3D321F4D996E00346AFB /* Video */,
 			);
 			path = Others;
@@ -745,15 +837,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3C91E51F50330400D994CB /* BangumiHeaderController.xib in Resources */,
 				DF8226631E696A3E00C88679 /* LaunchScreen.storyboard in Resources */,
 				DF1EFAA71F52D623002D20F6 /* CommentCell.xib in Resources */,
 				DF8226A01E697DE300C88679 /* Localizable.strings in Resources */,
 				DF191F461F54371000675718 /* BangumiRelatedRecViewCell.xib in Resources */,
+				984C43B51FF499F1000398F8 /* BangumiHeaderController.xib in Resources */,
+				98B369271F7F779E0093D228 /* iPad.storyboard in Resources */,
 				DF1EFAAF1F52DF43002D20F6 /* BangumiSponsorView.xib in Resources */,
 				DF1EFAAD1F52DF43002D20F6 /* BangumiEpisodesCollectionViewCell.xib in Resources */,
 				DF8226601E696A3E00C88679 /* Assets.xcassets in Resources */,
-				DFEAD3ED1F54981100CC1B06 /* BangumiViewController.storyboard in Resources */,
 				DF8226A51E697E0500C88679 /* Localizable.stringsdict in Resources */,
 				DF5B31551EA760A40029E181 /* iPhone.storyboard in Resources */,
 			);
@@ -893,7 +985,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Bilibili/Supporting Files\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Bilibili/Supporting Files\"";
 		};
 		DF82269B1E696DFB00C88679 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -970,22 +1062,26 @@
 				DFDFF5C41EFDA1BF00CB5340 /* AttentionViewController.swift in Sources */,
 				DFDFF5BE1EFDA19E00CB5340 /* HomeViewController.swift in Sources */,
 				DF50308F1EFD67100083A75F /* EmoticonKeyboard.swift in Sources */,
+				98B369291F7F77DB0093D228 /* SideBarController.swift in Sources */,
 				DF50307D1EFD628B0083A75F /* Strings.swift in Sources */,
 				DFDFF5C21EFDA1B500CB5340 /* CategoryViewController.swift in Sources */,
+				98103B691FAB06C30098BE5C /* Navigator.swift in Sources */,
 				DFE6F0621F23626600BD3EC2 /* DanmakuFilter.swift in Sources */,
 				DFE6F0601F23625500BD3EC2 /* DanmakuUtils.swift in Sources */,
 				DF5030841EFD65E50083A75F /* Theme.swift in Sources */,
 				DF8226971E696D4A00C88679 /* Account.swift in Sources */,
 				DF8226941E696D4A00C88679 /* AppDelegate.swift in Sources */,
 				98CA573E1F138BF800E4B370 /* PortraitNavigationController.swift in Sources */,
+				984C43B11FF49987000398F8 /* LiveViewController.swift in Sources */,
+				98B3F26E1FCFCA7700D23ECE /* Models.xcdatamodeld in Sources */,
 				DF5030911EFD67100083A75F /* EmoticonParser.swift in Sources */,
 				DFD6FB281F05202700C39B45 /* SystemMessageStorage.swift in Sources */,
 				DF9ABBEF1F532CEE002F997B /* BangumiTagsView.swift in Sources */,
 				DF5030901EFD67100083A75F /* EmoticonManager.swift in Sources */,
+				984C43B41FF499F1000398F8 /* BangumiHeaderController.swift in Sources */,
 				DF82269F1E697DB400C88679 /* R.generated.swift in Sources */,
 				DFE6F0661F23629400BD3EC2 /* DanmakuParser.swift in Sources */,
 				DF9ABBEC1F52F197002F997B /* BangumiSeasonsCollectionView.swift in Sources */,
-				DF9A5F151F502AE6009E3AC6 /* BangumiHeaderController.swift in Sources */,
 				DFD6FB261F0519DE00C39B45 /* BaseStorage.swift in Sources */,
 				DF9ABBF31F53D059002F997B /* BangumiRelatedRecView.swift in Sources */,
 				DFDFF5C01EFDA1A900CB5340 /* DiscoverViewController.swift in Sources */,
@@ -1026,6 +1122,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		98B369251F7F779E0093D228 /* iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98B369261F7F779E0093D228 /* Base */,
+			);
+			name = iPad.storyboard;
+			sourceTree = "<group>";
+		};
 		DF5B31531EA760A40029E181 /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1174,7 +1278,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WHFYY29THE;
 				INFOPLIST_FILE = "$(SRCROOT)/Bilibili/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.2dimension.Bilibili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1189,7 +1293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WHFYY29THE;
 				INFOPLIST_FILE = "$(SRCROOT)/Bilibili/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.2dimension.Bilibili;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1299,6 +1403,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98B3F26C1FCFCA7700D23ECE /* Models.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98B3F26D1FCFCA7700D23ECE /* Model.xcdatamodel */,
+			);
+			currentVersion = 98B3F26D1FCFCA7700D23ECE /* Model.xcdatamodel */;
+			path = Models.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DF82264B1E696A3E00C88679 /* Project object */;
 }

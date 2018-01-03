@@ -10,18 +10,14 @@ import UIKit
 
 extension UIView
 {
-    public var centerX: CGFloat {
-        get { return self.frame.origin.x + self.frame.size.width * 0.5 }
-        set { self.frame.origin.x = newValue - self.frame.size.width * 0.5 }
+    
+    /// Traverse all subviews including self.
+    @objc public func traverseSubviews(_ callback: (UIView) -> Void) {
+        callback(self)
+        print("\(subviews)")
+        for subview in subviews {
+            subview.traverseSubviews(callback)
+        }
     }
     
-    public var centerY: CGFloat {
-        get { return self.frame.origin.y + self.frame.size.height * 0.5 }
-        set { self.frame.origin.y = newValue - self.frame.size.height * 0.5 }
-    }
-    
-    public var size: CGSize {
-        get { return self.frame.size }
-        set { self.frame = CGRect(origin: self.frame.origin, size: size) }
-    }
 }

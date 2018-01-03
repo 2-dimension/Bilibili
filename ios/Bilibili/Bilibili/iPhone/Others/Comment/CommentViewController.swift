@@ -20,6 +20,29 @@ class CommentViewController: LoadingViewController, UITableViewDelegate, UITable
     
     var comments: Comments?
     
+    lazy var moreHotCommentsHeader: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: (self.tableView?.width)!, height: 30))
+        view.autoresizingMask = .flexibleWidth
+        
+        let button = UIButton(type: .custom)
+        button.size = CGSize(width: 120, height: 30)
+        button.centerX = view.centerX
+        button.backgroundColor = self.tableView?.backgroundColor
+        button.setTitle(R.string.localizable.commentMoreHotComments(), for: .normal)
+        button.setTitleColor(UIColor(red: 1.000, green: 0.441, blue: 0.671, alpha: 1.000), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        button.addTarget(self, action: #selector(onClickMoreHotCommentsButton), for: .touchUpInside)
+        
+        let separator = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: 0.5))
+        separator.centerY = view.centerY
+        separator.backgroundColor = .lightGray
+        separator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        view.addSubview(separator)
+        view.addSubview(button)
+        return view
+    }()
+    
     // MARK: Initialization
     
     init(aid: Int) {
@@ -51,14 +74,20 @@ class CommentViewController: LoadingViewController, UITableViewDelegate, UITable
         tableView?.delegate = self
         tableView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView?.separatorStyle = .none
-        tableView?.backgroundColor = UIColor(white: 0.95, alpha: 1.000)
+        tableView?.backgroundColor = UIColor(hex: 0xEEEEEEFF)
         tableView?.contentInset = UIEdgeInsetsMake(0, 0, -44, 0)
         tableView?.estimatedRowHeight = 200
         tableView?.rowHeight = UITableViewAutomaticDimension
-        tableView?.mj_footer = MJRefreshAutoFooter(refreshingBlock: {
-            [weak self] () -> Void in
-            self?.loadComments()
-        })
+        tableView?.showsVerticalScrollIndicator = false
+        tableView?.mj_footer = {
+            let refresher = MJRefreshAutoFooter(refreshingBlock: {
+                [unowned self] in
+                self.loadComments()
+            })
+            refresher?.triggerAutomaticallyRefreshPercent = -50
+            return refresher
+        }()
+        
         view?.addSubview(tableView!)
         
         let footer: MJRefreshAutoFooter? = (tableView?.mj_footer as? MJRefreshAutoFooter)
@@ -124,25 +153,8 @@ class CommentViewController: LoadingViewController, UITableViewDelegate, UITable
         if section == 0 {
             return nil
         }
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: (self.tableView?.width)!, height: 30))
-        view.autoresizingMask = .flexibleWidth
         
-        var button = UIButton(type: .custom)
-        button.size = CGSize(width: 120, height: 30)
-        button.centerX = view.centerX
-        button.backgroundColor = self.tableView?.backgroundColor
-        button.setTitle(R.string.localizable.commentMoreHotComments(), for: .normal)
-        button.setTitleColor(UIColor(red: 1.000, green: 0.441, blue: 0.671, alpha: 1.000), for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        button.addTarget(self, action: #selector(onClickMoreHotCommentsButton), for: .touchUpInside)
-        
-        let separator = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 0.5))
-        separator.backgroundColor = .lightGray
-        separator.centerY = view.centerY
-        
-        view.addSubview(separator)
-        view.addSubview(button)
-        return view
+        return nil
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -150,7 +162,6 @@ class CommentViewController: LoadingViewController, UITableViewDelegate, UITable
         case 1: return 30
         default: return 0.1
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -158,10 +169,11 @@ class CommentViewController: LoadingViewController, UITableViewDelegate, UITable
     }
     
     // MARK: Encapsulation
+    
     func loadComments() {
         if aid == 0 { return }
         
-        BilibiliAPI.getComments(aid: aid, page: page, success: { (response) in
+        BilibiliAPI.getComments(aid: aid, page: page, pageSize: 50, success: { (response) in
             if self.comments == nil || self.page == 0 {
                 self.comments = response.result
             } else {
